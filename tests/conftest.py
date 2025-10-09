@@ -1,4 +1,5 @@
 import os
+
 import pytest
 import vcr
 
@@ -17,15 +18,7 @@ def scrub_api_keys(request):
     return request
 
 
-# Configure VCR with custom settings
-trackify_vcr = vcr.VCR(
-    filter_headers=["Authorization", "X-Api-Key"],
-    before_record_request=scrub_api_keys,
-    record_mode="once",
-)
-
-
-@pytest.fixture
+@pytest.fixture(autouse=True, scope="module")
 def vcr_config():
     """VCR configuration for pytest-vcr."""
     return {

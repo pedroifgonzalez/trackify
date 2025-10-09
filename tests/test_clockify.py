@@ -1,15 +1,16 @@
-import pytest
-from src.clockify.client import ClockifyClient
-import os
 import datetime
-from conftest import trackify_vcr
+import os
+
+import pytest
+
+from src.clockify.client import ClockifyClient
 
 CLOCKIFY_API_KEY = os.getenv("CLOCKIFY_API_KEY")
 WORKSPACE_ID = os.getenv("WORKSPACE_ID")
 PROJECT_ID = os.getenv("PROJECT_ID")
 
 
-@trackify_vcr.use_cassette
+@pytest.mark.vcr
 def test_create_time_entry():
     clockify_client = ClockifyClient(
         api_key=CLOCKIFY_API_KEY, workspace_id=WORKSPACE_ID, project_id=PROJECT_ID
