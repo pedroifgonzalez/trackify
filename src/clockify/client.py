@@ -47,4 +47,10 @@ class ClockifyClient:
         if response.status_code != 201:
             print(response.json())
             raise Exception("Failed to create time entry")
-        return ClockifyTimeEntry(**response.json())
+        data = response.json()
+        return ClockifyTimeEntry(
+            billable=data["billable"],
+            description=data["description"],
+            projectId=data["projectId"],
+            workspaceId=data["workspaceId"],
+        )
