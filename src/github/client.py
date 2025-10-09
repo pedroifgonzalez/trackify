@@ -1,21 +1,11 @@
-import json
-import os
-import subprocess
-import sys
-from dataclasses import dataclass
-from typing import Any, Dict, List, Optional, Tuple
+from typing import List, Optional
 
 from github import Auth, Github
+from src.github.base import IGitClient
+from src.github.dtos import CommitData, PullRequestData
 
 
-@dataclass
-class PullRequestInfo:
-    title: str
-    branch_name: str
-    state: str
-
-
-class GitHubClient:
+class GitHubClient(IGitClient):
     def __init__(self, access_token: str, repo_name: str) -> None:
         """Initialize the GitHub client.
 
@@ -27,7 +17,7 @@ class GitHubClient:
         self.github = Github(auth=self.auth)
         self.repo_name = repo_name
 
-    def get_pull_request(self, pr_id: int) -> Optional[PullRequestInfo]:
+    def get_pull_request(self, pr_id: int) -> PullRequestData:
         """Get pull request information.
 
         Args:
@@ -38,8 +28,30 @@ class GitHubClient:
         """
         repo = self.github.get_repo(self.repo_name)
         pr = repo.get_pull(pr_id)
-        return PullRequestInfo(
+        return PullRequestData(
+            number=pr.number,
             title=pr.title,
             branch_name=pr.head.ref,
             state=pr.state,
+            url=pr.html_url,
         )
+
+    def get_pull_commits(self, pr_id: int) -> List[CommitData]:
+        """Fetch commits for a PR."""
+        repo = self.github.get_repo(self.repo_name)
+        pr = repo.get_pull(pr_id)
+        commits = []
+        for c in pr.get_commits():
+            commits.append(
+                CommitData(
+                    hash=c.sha,
+                    message=c.commit.message,
+                    author=c.commit.author.name if c.commit.author else "unknown",
+                    date=(
+                        c.commit.author.date.isoformat()
+                        if c.commit.author
+                        else "unknown"
+                    ),
+                )
+            )
+        return commits

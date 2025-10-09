@@ -1,0 +1,425 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - PyGithub/Python
+    method: GET
+    uri: https://api.github.com/repos/razoralv89/media_service_poc
+  response:
+    body:
+      string: '{"id":917382796,"node_id":"R_kgDONq4mjA","name":"media_service_poc","full_name":"razoralv89/media_service_poc","private":true,"owner":{"login":"razoralv89","id":28672721,"node_id":"MDQ6VXNlcjI4NjcyNzIx","avatar_url":"https://avatars.githubusercontent.com/u/28672721?v=4","gravatar_id":"","url":"https://api.github.com/users/razoralv89","html_url":"https://github.com/razoralv89","followers_url":"https://api.github.com/users/razoralv89/followers","following_url":"https://api.github.com/users/razoralv89/following{/other_user}","gists_url":"https://api.github.com/users/razoralv89/gists{/gist_id}","starred_url":"https://api.github.com/users/razoralv89/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/razoralv89/subscriptions","organizations_url":"https://api.github.com/users/razoralv89/orgs","repos_url":"https://api.github.com/users/razoralv89/repos","events_url":"https://api.github.com/users/razoralv89/events{/privacy}","received_events_url":"https://api.github.com/users/razoralv89/received_events","type":"User","user_view_type":"public","site_admin":false},"html_url":"https://github.com/razoralv89/media_service_poc","description":null,"fork":false,"url":"https://api.github.com/repos/razoralv89/media_service_poc","forks_url":"https://api.github.com/repos/razoralv89/media_service_poc/forks","keys_url":"https://api.github.com/repos/razoralv89/media_service_poc/keys{/key_id}","collaborators_url":"https://api.github.com/repos/razoralv89/media_service_poc/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/razoralv89/media_service_poc/teams","hooks_url":"https://api.github.com/repos/razoralv89/media_service_poc/hooks","issue_events_url":"https://api.github.com/repos/razoralv89/media_service_poc/issues/events{/number}","events_url":"https://api.github.com/repos/razoralv89/media_service_poc/events","assignees_url":"https://api.github.com/repos/razoralv89/media_service_poc/assignees{/user}","branches_url":"https://api.github.com/repos/razoralv89/media_service_poc/branches{/branch}","tags_url":"https://api.github.com/repos/razoralv89/media_service_poc/tags","blobs_url":"https://api.github.com/repos/razoralv89/media_service_poc/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/razoralv89/media_service_poc/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/razoralv89/media_service_poc/git/refs{/sha}","trees_url":"https://api.github.com/repos/razoralv89/media_service_poc/git/trees{/sha}","statuses_url":"https://api.github.com/repos/razoralv89/media_service_poc/statuses/{sha}","languages_url":"https://api.github.com/repos/razoralv89/media_service_poc/languages","stargazers_url":"https://api.github.com/repos/razoralv89/media_service_poc/stargazers","contributors_url":"https://api.github.com/repos/razoralv89/media_service_poc/contributors","subscribers_url":"https://api.github.com/repos/razoralv89/media_service_poc/subscribers","subscription_url":"https://api.github.com/repos/razoralv89/media_service_poc/subscription","commits_url":"https://api.github.com/repos/razoralv89/media_service_poc/commits{/sha}","git_commits_url":"https://api.github.com/repos/razoralv89/media_service_poc/git/commits{/sha}","comments_url":"https://api.github.com/repos/razoralv89/media_service_poc/comments{/number}","issue_comment_url":"https://api.github.com/repos/razoralv89/media_service_poc/issues/comments{/number}","contents_url":"https://api.github.com/repos/razoralv89/media_service_poc/contents/{+path}","compare_url":"https://api.github.com/repos/razoralv89/media_service_poc/compare/{base}...{head}","merges_url":"https://api.github.com/repos/razoralv89/media_service_poc/merges","archive_url":"https://api.github.com/repos/razoralv89/media_service_poc/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/razoralv89/media_service_poc/downloads","issues_url":"https://api.github.com/repos/razoralv89/media_service_poc/issues{/number}","pulls_url":"https://api.github.com/repos/razoralv89/media_service_poc/pulls{/number}","milestones_url":"https://api.github.com/repos/razoralv89/media_service_poc/milestones{/number}","notifications_url":"https://api.github.com/repos/razoralv89/media_service_poc/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/razoralv89/media_service_poc/labels{/name}","releases_url":"https://api.github.com/repos/razoralv89/media_service_poc/releases{/id}","deployments_url":"https://api.github.com/repos/razoralv89/media_service_poc/deployments","created_at":"2025-01-15T21:55:00Z","updated_at":"2025-10-09T16:04:07Z","pushed_at":"2025-10-09T15:34:37Z","git_url":"git://github.com/razoralv89/media_service_poc.git","ssh_url":"git@github.com:razoralv89/media_service_poc.git","clone_url":"https://github.com/razoralv89/media_service_poc.git","svn_url":"https://github.com/razoralv89/media_service_poc","homepage":null,"size":3624,"stargazers_count":0,"watchers_count":0,"language":"Python","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":4,"license":null,"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"private","forks":0,"open_issues":4,"watchers":0,"default_branch":"main","permissions":{"admin":false,"maintain":false,"push":true,"triage":true,"pull":true},"temp_clone_token":"ANIGWW7B6JMCZSLI5WHGNTLI5AMN2","allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"allow_auto_merge":false,"delete_branch_on_merge":false,"allow_update_branch":false,"use_squash_pr_title_as_default":false,"squash_merge_commit_message":"COMMIT_MESSAGES","squash_merge_commit_title":"COMMIT_OR_PR_TITLE","merge_commit_message":"PR_TITLE","merge_commit_title":"MERGE_MESSAGE","network_count":0,"subscribers_count":0}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 09 Oct 2025 20:14:41 GMT
+      ETag:
+      - W/"f2afa3f93c920f16f9ec8b456a580073743d38d1819ec7032f5a2d0957a6208b"
+      Last-Modified:
+      - Thu, 09 Oct 2025 16:04:07 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - github.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP,Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - repo
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-GitHub-Request-Id:
+      - 3C0E:1D5417:27756D5:AD71EA5:68E817B1
+      X-OAuth-Scopes:
+      - gist, read:org, repo
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4995'
+      X-RateLimit-Reset:
+      - '1760043512'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '5'
+      X-XSS-Protection:
+      - '0'
+      x-github-api-version-selected:
+      - '2022-11-28'
+      x-oauth-client-id:
+      - 178c6fc778ccc68e1d6a
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - PyGithub/Python
+    method: GET
+    uri: https://api.github.com/repos/razoralv89/media_service_poc/pulls/584
+  response:
+    body:
+      string: "{\"url\":\"https://api.github.com/repos/razoralv89/media_service_poc/pulls/584\",\"id\":2898843844,\"node_id\":\"PR_kwDONq4mjM6syNjE\",\"html_url\":\"https://github.com/razoralv89/media_service_poc/pull/584\",\"diff_url\":\"https://github.com/razoralv89/media_service_poc/pull/584.diff\",\"patch_url\":\"https://github.com/razoralv89/media_service_poc/pull/584.patch\",\"issue_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/issues/584\",\"number\":584,\"state\":\"open\",\"locked\":false,\"title\":\"Improve
+        approval notification email content and grammar\",\"user\":{\"login\":\"pedroifgonzalez\",\"id\":55602011,\"node_id\":\"MDQ6VXNlcjU1NjAyMDEx\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/55602011?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/pedroifgonzalez\",\"html_url\":\"https://github.com/pedroifgonzalez\",\"followers_url\":\"https://api.github.com/users/pedroifgonzalez/followers\",\"following_url\":\"https://api.github.com/users/pedroifgonzalez/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/pedroifgonzalez/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/pedroifgonzalez/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/pedroifgonzalez/subscriptions\",\"organizations_url\":\"https://api.github.com/users/pedroifgonzalez/orgs\",\"repos_url\":\"https://api.github.com/users/pedroifgonzalez/repos\",\"events_url\":\"https://api.github.com/users/pedroifgonzalez/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/pedroifgonzalez/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"body\":\"-
+        Remove trailing period from email subject line for consistency\\n- Improve
+        grammar in approval template: \\\"We sent\\\" \u2192 \\\"We've sent\\\"\\n-
+        Update corresponding test to match new subject format\\n\\n\\n<!-- This is
+        an auto-generated comment: release notes by coderabbit.ai -->\\n\\n## Summary
+        by CodeRabbit\\n\\n- Style\\n  - Polished approved access request email copy:
+        removed trailing period in the subject and updated body text to \u201CWe\u2019ve
+        sent a message to the vault owner\u2026\u201D for clearer, friendlier tone.\\n\\n-
+        Tests\\n  - Updated email notification test to reflect the revised subject
+        line without the trailing period.\\n\\n<!-- end of auto-generated comment:
+        release notes by coderabbit.ai -->\",\"created_at\":\"2025-10-08T21:52:59Z\",\"updated_at\":\"2025-10-08T21:54:12Z\",\"closed_at\":null,\"merged_at\":null,\"merge_commit_sha\":null,\"assignee\":{\"login\":\"pedroifgonzalez\",\"id\":55602011,\"node_id\":\"MDQ6VXNlcjU1NjAyMDEx\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/55602011?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/pedroifgonzalez\",\"html_url\":\"https://github.com/pedroifgonzalez\",\"followers_url\":\"https://api.github.com/users/pedroifgonzalez/followers\",\"following_url\":\"https://api.github.com/users/pedroifgonzalez/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/pedroifgonzalez/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/pedroifgonzalez/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/pedroifgonzalez/subscriptions\",\"organizations_url\":\"https://api.github.com/users/pedroifgonzalez/orgs\",\"repos_url\":\"https://api.github.com/users/pedroifgonzalez/repos\",\"events_url\":\"https://api.github.com/users/pedroifgonzalez/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/pedroifgonzalez/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"assignees\":[{\"login\":\"pedroifgonzalez\",\"id\":55602011,\"node_id\":\"MDQ6VXNlcjU1NjAyMDEx\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/55602011?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/pedroifgonzalez\",\"html_url\":\"https://github.com/pedroifgonzalez\",\"followers_url\":\"https://api.github.com/users/pedroifgonzalez/followers\",\"following_url\":\"https://api.github.com/users/pedroifgonzalez/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/pedroifgonzalez/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/pedroifgonzalez/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/pedroifgonzalez/subscriptions\",\"organizations_url\":\"https://api.github.com/users/pedroifgonzalez/orgs\",\"repos_url\":\"https://api.github.com/users/pedroifgonzalez/repos\",\"events_url\":\"https://api.github.com/users/pedroifgonzalez/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/pedroifgonzalez/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false}],\"requested_reviewers\":[],\"requested_teams\":[],\"labels\":[],\"milestone\":null,\"draft\":false,\"commits_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/pulls/584/commits\",\"review_comments_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/pulls/584/comments\",\"review_comment_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/pulls/comments{/number}\",\"comments_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/issues/584/comments\",\"statuses_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/statuses/73b6f1f7e2af7c29ea52f3c9e2f546f6bcfcbe5e\",\"head\":{\"label\":\"razoralv89:fix/improve-approval-notification-email-content\",\"ref\":\"fix/improve-approval-notification-email-content\",\"sha\":\"73b6f1f7e2af7c29ea52f3c9e2f546f6bcfcbe5e\",\"user\":{\"login\":\"razoralv89\",\"id\":28672721,\"node_id\":\"MDQ6VXNlcjI4NjcyNzIx\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/28672721?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/razoralv89\",\"html_url\":\"https://github.com/razoralv89\",\"followers_url\":\"https://api.github.com/users/razoralv89/followers\",\"following_url\":\"https://api.github.com/users/razoralv89/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/razoralv89/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/razoralv89/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/razoralv89/subscriptions\",\"organizations_url\":\"https://api.github.com/users/razoralv89/orgs\",\"repos_url\":\"https://api.github.com/users/razoralv89/repos\",\"events_url\":\"https://api.github.com/users/razoralv89/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/razoralv89/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"repo\":{\"id\":917382796,\"node_id\":\"R_kgDONq4mjA\",\"name\":\"media_service_poc\",\"full_name\":\"razoralv89/media_service_poc\",\"private\":true,\"owner\":{\"login\":\"razoralv89\",\"id\":28672721,\"node_id\":\"MDQ6VXNlcjI4NjcyNzIx\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/28672721?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/razoralv89\",\"html_url\":\"https://github.com/razoralv89\",\"followers_url\":\"https://api.github.com/users/razoralv89/followers\",\"following_url\":\"https://api.github.com/users/razoralv89/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/razoralv89/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/razoralv89/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/razoralv89/subscriptions\",\"organizations_url\":\"https://api.github.com/users/razoralv89/orgs\",\"repos_url\":\"https://api.github.com/users/razoralv89/repos\",\"events_url\":\"https://api.github.com/users/razoralv89/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/razoralv89/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"html_url\":\"https://github.com/razoralv89/media_service_poc\",\"description\":null,\"fork\":false,\"url\":\"https://api.github.com/repos/razoralv89/media_service_poc\",\"forks_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/forks\",\"keys_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/keys{/key_id}\",\"collaborators_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/collaborators{/collaborator}\",\"teams_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/teams\",\"hooks_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/hooks\",\"issue_events_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/issues/events{/number}\",\"events_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/events\",\"assignees_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/assignees{/user}\",\"branches_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/branches{/branch}\",\"tags_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/tags\",\"blobs_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/blobs{/sha}\",\"git_tags_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/tags{/sha}\",\"git_refs_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/refs{/sha}\",\"trees_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/trees{/sha}\",\"statuses_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/statuses/{sha}\",\"languages_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/languages\",\"stargazers_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/stargazers\",\"contributors_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/contributors\",\"subscribers_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/subscribers\",\"subscription_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/subscription\",\"commits_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/commits{/sha}\",\"git_commits_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/commits{/sha}\",\"comments_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/comments{/number}\",\"issue_comment_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/issues/comments{/number}\",\"contents_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/contents/{+path}\",\"compare_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/compare/{base}...{head}\",\"merges_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/merges\",\"archive_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/{archive_format}{/ref}\",\"downloads_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/downloads\",\"issues_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/issues{/number}\",\"pulls_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/pulls{/number}\",\"milestones_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/milestones{/number}\",\"notifications_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/notifications{?since,all,participating}\",\"labels_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/labels{/name}\",\"releases_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/releases{/id}\",\"deployments_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/deployments\",\"created_at\":\"2025-01-15T21:55:00Z\",\"updated_at\":\"2025-10-09T16:04:07Z\",\"pushed_at\":\"2025-10-09T15:34:37Z\",\"git_url\":\"git://github.com/razoralv89/media_service_poc.git\",\"ssh_url\":\"git@github.com:razoralv89/media_service_poc.git\",\"clone_url\":\"https://github.com/razoralv89/media_service_poc.git\",\"svn_url\":\"https://github.com/razoralv89/media_service_poc\",\"homepage\":null,\"size\":3624,\"stargazers_count\":0,\"watchers_count\":0,\"language\":\"Python\",\"has_issues\":true,\"has_projects\":true,\"has_downloads\":true,\"has_wiki\":true,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":0,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":4,\"license\":null,\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"topics\":[],\"visibility\":\"private\",\"forks\":0,\"open_issues\":4,\"watchers\":0,\"default_branch\":\"main\"}},\"base\":{\"label\":\"razoralv89:main\",\"ref\":\"main\",\"sha\":\"057ca2b579294179026f50044772e01bde50909c\",\"user\":{\"login\":\"razoralv89\",\"id\":28672721,\"node_id\":\"MDQ6VXNlcjI4NjcyNzIx\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/28672721?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/razoralv89\",\"html_url\":\"https://github.com/razoralv89\",\"followers_url\":\"https://api.github.com/users/razoralv89/followers\",\"following_url\":\"https://api.github.com/users/razoralv89/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/razoralv89/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/razoralv89/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/razoralv89/subscriptions\",\"organizations_url\":\"https://api.github.com/users/razoralv89/orgs\",\"repos_url\":\"https://api.github.com/users/razoralv89/repos\",\"events_url\":\"https://api.github.com/users/razoralv89/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/razoralv89/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"repo\":{\"id\":917382796,\"node_id\":\"R_kgDONq4mjA\",\"name\":\"media_service_poc\",\"full_name\":\"razoralv89/media_service_poc\",\"private\":true,\"owner\":{\"login\":\"razoralv89\",\"id\":28672721,\"node_id\":\"MDQ6VXNlcjI4NjcyNzIx\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/28672721?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/razoralv89\",\"html_url\":\"https://github.com/razoralv89\",\"followers_url\":\"https://api.github.com/users/razoralv89/followers\",\"following_url\":\"https://api.github.com/users/razoralv89/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/razoralv89/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/razoralv89/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/razoralv89/subscriptions\",\"organizations_url\":\"https://api.github.com/users/razoralv89/orgs\",\"repos_url\":\"https://api.github.com/users/razoralv89/repos\",\"events_url\":\"https://api.github.com/users/razoralv89/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/razoralv89/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"html_url\":\"https://github.com/razoralv89/media_service_poc\",\"description\":null,\"fork\":false,\"url\":\"https://api.github.com/repos/razoralv89/media_service_poc\",\"forks_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/forks\",\"keys_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/keys{/key_id}\",\"collaborators_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/collaborators{/collaborator}\",\"teams_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/teams\",\"hooks_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/hooks\",\"issue_events_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/issues/events{/number}\",\"events_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/events\",\"assignees_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/assignees{/user}\",\"branches_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/branches{/branch}\",\"tags_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/tags\",\"blobs_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/blobs{/sha}\",\"git_tags_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/tags{/sha}\",\"git_refs_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/refs{/sha}\",\"trees_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/trees{/sha}\",\"statuses_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/statuses/{sha}\",\"languages_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/languages\",\"stargazers_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/stargazers\",\"contributors_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/contributors\",\"subscribers_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/subscribers\",\"subscription_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/subscription\",\"commits_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/commits{/sha}\",\"git_commits_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/commits{/sha}\",\"comments_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/comments{/number}\",\"issue_comment_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/issues/comments{/number}\",\"contents_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/contents/{+path}\",\"compare_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/compare/{base}...{head}\",\"merges_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/merges\",\"archive_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/{archive_format}{/ref}\",\"downloads_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/downloads\",\"issues_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/issues{/number}\",\"pulls_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/pulls{/number}\",\"milestones_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/milestones{/number}\",\"notifications_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/notifications{?since,all,participating}\",\"labels_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/labels{/name}\",\"releases_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/releases{/id}\",\"deployments_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/deployments\",\"created_at\":\"2025-01-15T21:55:00Z\",\"updated_at\":\"2025-10-09T16:04:07Z\",\"pushed_at\":\"2025-10-09T15:34:37Z\",\"git_url\":\"git://github.com/razoralv89/media_service_poc.git\",\"ssh_url\":\"git@github.com:razoralv89/media_service_poc.git\",\"clone_url\":\"https://github.com/razoralv89/media_service_poc.git\",\"svn_url\":\"https://github.com/razoralv89/media_service_poc\",\"homepage\":null,\"size\":3624,\"stargazers_count\":0,\"watchers_count\":0,\"language\":\"Python\",\"has_issues\":true,\"has_projects\":true,\"has_downloads\":true,\"has_wiki\":true,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":0,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":4,\"license\":null,\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"topics\":[],\"visibility\":\"private\",\"forks\":0,\"open_issues\":4,\"watchers\":0,\"default_branch\":\"main\"}},\"_links\":{\"self\":{\"href\":\"https://api.github.com/repos/razoralv89/media_service_poc/pulls/584\"},\"html\":{\"href\":\"https://github.com/razoralv89/media_service_poc/pull/584\"},\"issue\":{\"href\":\"https://api.github.com/repos/razoralv89/media_service_poc/issues/584\"},\"comments\":{\"href\":\"https://api.github.com/repos/razoralv89/media_service_poc/issues/584/comments\"},\"review_comments\":{\"href\":\"https://api.github.com/repos/razoralv89/media_service_poc/pulls/584/comments\"},\"review_comment\":{\"href\":\"https://api.github.com/repos/razoralv89/media_service_poc/pulls/comments{/number}\"},\"commits\":{\"href\":\"https://api.github.com/repos/razoralv89/media_service_poc/pulls/584/commits\"},\"statuses\":{\"href\":\"https://api.github.com/repos/razoralv89/media_service_poc/statuses/73b6f1f7e2af7c29ea52f3c9e2f546f6bcfcbe5e\"}},\"author_association\":\"COLLABORATOR\",\"auto_merge\":null,\"active_lock_reason\":null,\"merged\":false,\"mergeable\":false,\"rebaseable\":false,\"mergeable_state\":\"dirty\",\"merged_by\":null,\"comments\":1,\"review_comments\":0,\"maintainer_can_modify\":false,\"commits\":1,\"additions\":3,\"deletions\":3,\"changed_files\":3}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 09 Oct 2025 20:14:43 GMT
+      ETag:
+      - W/"c5fe73f733df5a6be8fe6ef02b5bcbc3b7fff9f5618ccc41baa766efbaa266c0"
+      Last-Modified:
+      - Wed, 08 Oct 2025 21:54:12 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - github.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP,Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - ''
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-GitHub-Request-Id:
+      - 3C12:1B66EA:27176CA:AC386EA:68E817B2
+      X-OAuth-Scopes:
+      - gist, read:org, repo
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4994'
+      X-RateLimit-Reset:
+      - '1760043512'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '6'
+      X-XSS-Protection:
+      - '0'
+      x-github-api-version-selected:
+      - '2022-11-28'
+      x-oauth-client-id:
+      - 178c6fc778ccc68e1d6a
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - PyGithub/Python
+    method: GET
+    uri: https://api.github.com/repos/razoralv89/media_service_poc
+  response:
+    body:
+      string: '{"id":917382796,"node_id":"R_kgDONq4mjA","name":"media_service_poc","full_name":"razoralv89/media_service_poc","private":true,"owner":{"login":"razoralv89","id":28672721,"node_id":"MDQ6VXNlcjI4NjcyNzIx","avatar_url":"https://avatars.githubusercontent.com/u/28672721?v=4","gravatar_id":"","url":"https://api.github.com/users/razoralv89","html_url":"https://github.com/razoralv89","followers_url":"https://api.github.com/users/razoralv89/followers","following_url":"https://api.github.com/users/razoralv89/following{/other_user}","gists_url":"https://api.github.com/users/razoralv89/gists{/gist_id}","starred_url":"https://api.github.com/users/razoralv89/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/razoralv89/subscriptions","organizations_url":"https://api.github.com/users/razoralv89/orgs","repos_url":"https://api.github.com/users/razoralv89/repos","events_url":"https://api.github.com/users/razoralv89/events{/privacy}","received_events_url":"https://api.github.com/users/razoralv89/received_events","type":"User","user_view_type":"public","site_admin":false},"html_url":"https://github.com/razoralv89/media_service_poc","description":null,"fork":false,"url":"https://api.github.com/repos/razoralv89/media_service_poc","forks_url":"https://api.github.com/repos/razoralv89/media_service_poc/forks","keys_url":"https://api.github.com/repos/razoralv89/media_service_poc/keys{/key_id}","collaborators_url":"https://api.github.com/repos/razoralv89/media_service_poc/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/razoralv89/media_service_poc/teams","hooks_url":"https://api.github.com/repos/razoralv89/media_service_poc/hooks","issue_events_url":"https://api.github.com/repos/razoralv89/media_service_poc/issues/events{/number}","events_url":"https://api.github.com/repos/razoralv89/media_service_poc/events","assignees_url":"https://api.github.com/repos/razoralv89/media_service_poc/assignees{/user}","branches_url":"https://api.github.com/repos/razoralv89/media_service_poc/branches{/branch}","tags_url":"https://api.github.com/repos/razoralv89/media_service_poc/tags","blobs_url":"https://api.github.com/repos/razoralv89/media_service_poc/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/razoralv89/media_service_poc/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/razoralv89/media_service_poc/git/refs{/sha}","trees_url":"https://api.github.com/repos/razoralv89/media_service_poc/git/trees{/sha}","statuses_url":"https://api.github.com/repos/razoralv89/media_service_poc/statuses/{sha}","languages_url":"https://api.github.com/repos/razoralv89/media_service_poc/languages","stargazers_url":"https://api.github.com/repos/razoralv89/media_service_poc/stargazers","contributors_url":"https://api.github.com/repos/razoralv89/media_service_poc/contributors","subscribers_url":"https://api.github.com/repos/razoralv89/media_service_poc/subscribers","subscription_url":"https://api.github.com/repos/razoralv89/media_service_poc/subscription","commits_url":"https://api.github.com/repos/razoralv89/media_service_poc/commits{/sha}","git_commits_url":"https://api.github.com/repos/razoralv89/media_service_poc/git/commits{/sha}","comments_url":"https://api.github.com/repos/razoralv89/media_service_poc/comments{/number}","issue_comment_url":"https://api.github.com/repos/razoralv89/media_service_poc/issues/comments{/number}","contents_url":"https://api.github.com/repos/razoralv89/media_service_poc/contents/{+path}","compare_url":"https://api.github.com/repos/razoralv89/media_service_poc/compare/{base}...{head}","merges_url":"https://api.github.com/repos/razoralv89/media_service_poc/merges","archive_url":"https://api.github.com/repos/razoralv89/media_service_poc/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/razoralv89/media_service_poc/downloads","issues_url":"https://api.github.com/repos/razoralv89/media_service_poc/issues{/number}","pulls_url":"https://api.github.com/repos/razoralv89/media_service_poc/pulls{/number}","milestones_url":"https://api.github.com/repos/razoralv89/media_service_poc/milestones{/number}","notifications_url":"https://api.github.com/repos/razoralv89/media_service_poc/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/razoralv89/media_service_poc/labels{/name}","releases_url":"https://api.github.com/repos/razoralv89/media_service_poc/releases{/id}","deployments_url":"https://api.github.com/repos/razoralv89/media_service_poc/deployments","created_at":"2025-01-15T21:55:00Z","updated_at":"2025-10-09T16:04:07Z","pushed_at":"2025-10-09T15:34:37Z","git_url":"git://github.com/razoralv89/media_service_poc.git","ssh_url":"git@github.com:razoralv89/media_service_poc.git","clone_url":"https://github.com/razoralv89/media_service_poc.git","svn_url":"https://github.com/razoralv89/media_service_poc","homepage":null,"size":3624,"stargazers_count":0,"watchers_count":0,"language":"Python","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":4,"license":null,"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"private","forks":0,"open_issues":4,"watchers":0,"default_branch":"main","permissions":{"admin":false,"maintain":false,"push":true,"triage":true,"pull":true},"temp_clone_token":"ANIGWWZHGKPWYXRRAAT27VDI5AMOS","allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"allow_auto_merge":false,"delete_branch_on_merge":false,"allow_update_branch":false,"use_squash_pr_title_as_default":false,"squash_merge_commit_message":"COMMIT_MESSAGES","squash_merge_commit_title":"COMMIT_OR_PR_TITLE","merge_commit_message":"PR_TITLE","merge_commit_title":"MERGE_MESSAGE","network_count":0,"subscribers_count":0}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 09 Oct 2025 20:14:53 GMT
+      ETag:
+      - W/"f2afa3f93c920f16f9ec8b456a580073743d38d1819ec7032f5a2d0957a6208b"
+      Last-Modified:
+      - Thu, 09 Oct 2025 16:04:07 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - github.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP,Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - repo
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-GitHub-Request-Id:
+      - EBF4:226686:899A1:2523B8:68E817BD
+      X-OAuth-Scopes:
+      - gist, read:org, repo
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4993'
+      X-RateLimit-Reset:
+      - '1760043512'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '7'
+      X-XSS-Protection:
+      - '0'
+      x-github-api-version-selected:
+      - '2022-11-28'
+      x-oauth-client-id:
+      - 178c6fc778ccc68e1d6a
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - PyGithub/Python
+    method: GET
+    uri: https://api.github.com/repos/razoralv89/media_service_poc/pulls/584
+  response:
+    body:
+      string: "{\"url\":\"https://api.github.com/repos/razoralv89/media_service_poc/pulls/584\",\"id\":2898843844,\"node_id\":\"PR_kwDONq4mjM6syNjE\",\"html_url\":\"https://github.com/razoralv89/media_service_poc/pull/584\",\"diff_url\":\"https://github.com/razoralv89/media_service_poc/pull/584.diff\",\"patch_url\":\"https://github.com/razoralv89/media_service_poc/pull/584.patch\",\"issue_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/issues/584\",\"number\":584,\"state\":\"open\",\"locked\":false,\"title\":\"Improve
+        approval notification email content and grammar\",\"user\":{\"login\":\"pedroifgonzalez\",\"id\":55602011,\"node_id\":\"MDQ6VXNlcjU1NjAyMDEx\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/55602011?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/pedroifgonzalez\",\"html_url\":\"https://github.com/pedroifgonzalez\",\"followers_url\":\"https://api.github.com/users/pedroifgonzalez/followers\",\"following_url\":\"https://api.github.com/users/pedroifgonzalez/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/pedroifgonzalez/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/pedroifgonzalez/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/pedroifgonzalez/subscriptions\",\"organizations_url\":\"https://api.github.com/users/pedroifgonzalez/orgs\",\"repos_url\":\"https://api.github.com/users/pedroifgonzalez/repos\",\"events_url\":\"https://api.github.com/users/pedroifgonzalez/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/pedroifgonzalez/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"body\":\"-
+        Remove trailing period from email subject line for consistency\\n- Improve
+        grammar in approval template: \\\"We sent\\\" \u2192 \\\"We've sent\\\"\\n-
+        Update corresponding test to match new subject format\\n\\n\\n<!-- This is
+        an auto-generated comment: release notes by coderabbit.ai -->\\n\\n## Summary
+        by CodeRabbit\\n\\n- Style\\n  - Polished approved access request email copy:
+        removed trailing period in the subject and updated body text to \u201CWe\u2019ve
+        sent a message to the vault owner\u2026\u201D for clearer, friendlier tone.\\n\\n-
+        Tests\\n  - Updated email notification test to reflect the revised subject
+        line without the trailing period.\\n\\n<!-- end of auto-generated comment:
+        release notes by coderabbit.ai -->\",\"created_at\":\"2025-10-08T21:52:59Z\",\"updated_at\":\"2025-10-08T21:54:12Z\",\"closed_at\":null,\"merged_at\":null,\"merge_commit_sha\":null,\"assignee\":{\"login\":\"pedroifgonzalez\",\"id\":55602011,\"node_id\":\"MDQ6VXNlcjU1NjAyMDEx\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/55602011?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/pedroifgonzalez\",\"html_url\":\"https://github.com/pedroifgonzalez\",\"followers_url\":\"https://api.github.com/users/pedroifgonzalez/followers\",\"following_url\":\"https://api.github.com/users/pedroifgonzalez/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/pedroifgonzalez/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/pedroifgonzalez/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/pedroifgonzalez/subscriptions\",\"organizations_url\":\"https://api.github.com/users/pedroifgonzalez/orgs\",\"repos_url\":\"https://api.github.com/users/pedroifgonzalez/repos\",\"events_url\":\"https://api.github.com/users/pedroifgonzalez/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/pedroifgonzalez/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"assignees\":[{\"login\":\"pedroifgonzalez\",\"id\":55602011,\"node_id\":\"MDQ6VXNlcjU1NjAyMDEx\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/55602011?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/pedroifgonzalez\",\"html_url\":\"https://github.com/pedroifgonzalez\",\"followers_url\":\"https://api.github.com/users/pedroifgonzalez/followers\",\"following_url\":\"https://api.github.com/users/pedroifgonzalez/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/pedroifgonzalez/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/pedroifgonzalez/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/pedroifgonzalez/subscriptions\",\"organizations_url\":\"https://api.github.com/users/pedroifgonzalez/orgs\",\"repos_url\":\"https://api.github.com/users/pedroifgonzalez/repos\",\"events_url\":\"https://api.github.com/users/pedroifgonzalez/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/pedroifgonzalez/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false}],\"requested_reviewers\":[],\"requested_teams\":[],\"labels\":[],\"milestone\":null,\"draft\":false,\"commits_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/pulls/584/commits\",\"review_comments_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/pulls/584/comments\",\"review_comment_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/pulls/comments{/number}\",\"comments_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/issues/584/comments\",\"statuses_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/statuses/73b6f1f7e2af7c29ea52f3c9e2f546f6bcfcbe5e\",\"head\":{\"label\":\"razoralv89:fix/improve-approval-notification-email-content\",\"ref\":\"fix/improve-approval-notification-email-content\",\"sha\":\"73b6f1f7e2af7c29ea52f3c9e2f546f6bcfcbe5e\",\"user\":{\"login\":\"razoralv89\",\"id\":28672721,\"node_id\":\"MDQ6VXNlcjI4NjcyNzIx\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/28672721?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/razoralv89\",\"html_url\":\"https://github.com/razoralv89\",\"followers_url\":\"https://api.github.com/users/razoralv89/followers\",\"following_url\":\"https://api.github.com/users/razoralv89/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/razoralv89/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/razoralv89/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/razoralv89/subscriptions\",\"organizations_url\":\"https://api.github.com/users/razoralv89/orgs\",\"repos_url\":\"https://api.github.com/users/razoralv89/repos\",\"events_url\":\"https://api.github.com/users/razoralv89/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/razoralv89/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"repo\":{\"id\":917382796,\"node_id\":\"R_kgDONq4mjA\",\"name\":\"media_service_poc\",\"full_name\":\"razoralv89/media_service_poc\",\"private\":true,\"owner\":{\"login\":\"razoralv89\",\"id\":28672721,\"node_id\":\"MDQ6VXNlcjI4NjcyNzIx\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/28672721?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/razoralv89\",\"html_url\":\"https://github.com/razoralv89\",\"followers_url\":\"https://api.github.com/users/razoralv89/followers\",\"following_url\":\"https://api.github.com/users/razoralv89/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/razoralv89/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/razoralv89/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/razoralv89/subscriptions\",\"organizations_url\":\"https://api.github.com/users/razoralv89/orgs\",\"repos_url\":\"https://api.github.com/users/razoralv89/repos\",\"events_url\":\"https://api.github.com/users/razoralv89/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/razoralv89/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"html_url\":\"https://github.com/razoralv89/media_service_poc\",\"description\":null,\"fork\":false,\"url\":\"https://api.github.com/repos/razoralv89/media_service_poc\",\"forks_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/forks\",\"keys_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/keys{/key_id}\",\"collaborators_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/collaborators{/collaborator}\",\"teams_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/teams\",\"hooks_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/hooks\",\"issue_events_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/issues/events{/number}\",\"events_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/events\",\"assignees_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/assignees{/user}\",\"branches_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/branches{/branch}\",\"tags_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/tags\",\"blobs_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/blobs{/sha}\",\"git_tags_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/tags{/sha}\",\"git_refs_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/refs{/sha}\",\"trees_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/trees{/sha}\",\"statuses_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/statuses/{sha}\",\"languages_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/languages\",\"stargazers_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/stargazers\",\"contributors_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/contributors\",\"subscribers_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/subscribers\",\"subscription_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/subscription\",\"commits_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/commits{/sha}\",\"git_commits_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/commits{/sha}\",\"comments_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/comments{/number}\",\"issue_comment_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/issues/comments{/number}\",\"contents_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/contents/{+path}\",\"compare_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/compare/{base}...{head}\",\"merges_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/merges\",\"archive_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/{archive_format}{/ref}\",\"downloads_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/downloads\",\"issues_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/issues{/number}\",\"pulls_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/pulls{/number}\",\"milestones_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/milestones{/number}\",\"notifications_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/notifications{?since,all,participating}\",\"labels_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/labels{/name}\",\"releases_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/releases{/id}\",\"deployments_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/deployments\",\"created_at\":\"2025-01-15T21:55:00Z\",\"updated_at\":\"2025-10-09T16:04:07Z\",\"pushed_at\":\"2025-10-09T15:34:37Z\",\"git_url\":\"git://github.com/razoralv89/media_service_poc.git\",\"ssh_url\":\"git@github.com:razoralv89/media_service_poc.git\",\"clone_url\":\"https://github.com/razoralv89/media_service_poc.git\",\"svn_url\":\"https://github.com/razoralv89/media_service_poc\",\"homepage\":null,\"size\":3624,\"stargazers_count\":0,\"watchers_count\":0,\"language\":\"Python\",\"has_issues\":true,\"has_projects\":true,\"has_downloads\":true,\"has_wiki\":true,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":0,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":4,\"license\":null,\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"topics\":[],\"visibility\":\"private\",\"forks\":0,\"open_issues\":4,\"watchers\":0,\"default_branch\":\"main\"}},\"base\":{\"label\":\"razoralv89:main\",\"ref\":\"main\",\"sha\":\"057ca2b579294179026f50044772e01bde50909c\",\"user\":{\"login\":\"razoralv89\",\"id\":28672721,\"node_id\":\"MDQ6VXNlcjI4NjcyNzIx\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/28672721?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/razoralv89\",\"html_url\":\"https://github.com/razoralv89\",\"followers_url\":\"https://api.github.com/users/razoralv89/followers\",\"following_url\":\"https://api.github.com/users/razoralv89/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/razoralv89/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/razoralv89/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/razoralv89/subscriptions\",\"organizations_url\":\"https://api.github.com/users/razoralv89/orgs\",\"repos_url\":\"https://api.github.com/users/razoralv89/repos\",\"events_url\":\"https://api.github.com/users/razoralv89/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/razoralv89/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"repo\":{\"id\":917382796,\"node_id\":\"R_kgDONq4mjA\",\"name\":\"media_service_poc\",\"full_name\":\"razoralv89/media_service_poc\",\"private\":true,\"owner\":{\"login\":\"razoralv89\",\"id\":28672721,\"node_id\":\"MDQ6VXNlcjI4NjcyNzIx\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/28672721?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/razoralv89\",\"html_url\":\"https://github.com/razoralv89\",\"followers_url\":\"https://api.github.com/users/razoralv89/followers\",\"following_url\":\"https://api.github.com/users/razoralv89/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/razoralv89/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/razoralv89/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/razoralv89/subscriptions\",\"organizations_url\":\"https://api.github.com/users/razoralv89/orgs\",\"repos_url\":\"https://api.github.com/users/razoralv89/repos\",\"events_url\":\"https://api.github.com/users/razoralv89/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/razoralv89/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"html_url\":\"https://github.com/razoralv89/media_service_poc\",\"description\":null,\"fork\":false,\"url\":\"https://api.github.com/repos/razoralv89/media_service_poc\",\"forks_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/forks\",\"keys_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/keys{/key_id}\",\"collaborators_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/collaborators{/collaborator}\",\"teams_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/teams\",\"hooks_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/hooks\",\"issue_events_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/issues/events{/number}\",\"events_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/events\",\"assignees_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/assignees{/user}\",\"branches_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/branches{/branch}\",\"tags_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/tags\",\"blobs_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/blobs{/sha}\",\"git_tags_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/tags{/sha}\",\"git_refs_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/refs{/sha}\",\"trees_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/trees{/sha}\",\"statuses_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/statuses/{sha}\",\"languages_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/languages\",\"stargazers_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/stargazers\",\"contributors_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/contributors\",\"subscribers_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/subscribers\",\"subscription_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/subscription\",\"commits_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/commits{/sha}\",\"git_commits_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/commits{/sha}\",\"comments_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/comments{/number}\",\"issue_comment_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/issues/comments{/number}\",\"contents_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/contents/{+path}\",\"compare_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/compare/{base}...{head}\",\"merges_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/merges\",\"archive_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/{archive_format}{/ref}\",\"downloads_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/downloads\",\"issues_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/issues{/number}\",\"pulls_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/pulls{/number}\",\"milestones_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/milestones{/number}\",\"notifications_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/notifications{?since,all,participating}\",\"labels_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/labels{/name}\",\"releases_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/releases{/id}\",\"deployments_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/deployments\",\"created_at\":\"2025-01-15T21:55:00Z\",\"updated_at\":\"2025-10-09T16:04:07Z\",\"pushed_at\":\"2025-10-09T15:34:37Z\",\"git_url\":\"git://github.com/razoralv89/media_service_poc.git\",\"ssh_url\":\"git@github.com:razoralv89/media_service_poc.git\",\"clone_url\":\"https://github.com/razoralv89/media_service_poc.git\",\"svn_url\":\"https://github.com/razoralv89/media_service_poc\",\"homepage\":null,\"size\":3624,\"stargazers_count\":0,\"watchers_count\":0,\"language\":\"Python\",\"has_issues\":true,\"has_projects\":true,\"has_downloads\":true,\"has_wiki\":true,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":0,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":4,\"license\":null,\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"topics\":[],\"visibility\":\"private\",\"forks\":0,\"open_issues\":4,\"watchers\":0,\"default_branch\":\"main\"}},\"_links\":{\"self\":{\"href\":\"https://api.github.com/repos/razoralv89/media_service_poc/pulls/584\"},\"html\":{\"href\":\"https://github.com/razoralv89/media_service_poc/pull/584\"},\"issue\":{\"href\":\"https://api.github.com/repos/razoralv89/media_service_poc/issues/584\"},\"comments\":{\"href\":\"https://api.github.com/repos/razoralv89/media_service_poc/issues/584/comments\"},\"review_comments\":{\"href\":\"https://api.github.com/repos/razoralv89/media_service_poc/pulls/584/comments\"},\"review_comment\":{\"href\":\"https://api.github.com/repos/razoralv89/media_service_poc/pulls/comments{/number}\"},\"commits\":{\"href\":\"https://api.github.com/repos/razoralv89/media_service_poc/pulls/584/commits\"},\"statuses\":{\"href\":\"https://api.github.com/repos/razoralv89/media_service_poc/statuses/73b6f1f7e2af7c29ea52f3c9e2f546f6bcfcbe5e\"}},\"author_association\":\"COLLABORATOR\",\"auto_merge\":null,\"active_lock_reason\":null,\"merged\":false,\"mergeable\":false,\"rebaseable\":false,\"mergeable_state\":\"dirty\",\"merged_by\":null,\"comments\":1,\"review_comments\":0,\"maintainer_can_modify\":false,\"commits\":1,\"additions\":3,\"deletions\":3,\"changed_files\":3}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 09 Oct 2025 20:14:54 GMT
+      ETag:
+      - W/"c5fe73f733df5a6be8fe6ef02b5bcbc3b7fff9f5618ccc41baa766efbaa266c0"
+      Last-Modified:
+      - Wed, 08 Oct 2025 21:54:12 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - github.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP,Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - ''
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-GitHub-Request-Id:
+      - EBFA:1D5417:2779504:AD82DDC:68E817BD
+      X-OAuth-Scopes:
+      - gist, read:org, repo
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4992'
+      X-RateLimit-Reset:
+      - '1760043512'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '8'
+      X-XSS-Protection:
+      - '0'
+      x-github-api-version-selected:
+      - '2022-11-28'
+      x-oauth-client-id:
+      - 178c6fc778ccc68e1d6a
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - PyGithub/Python
+    method: GET
+    uri: https://api.github.com/repos/razoralv89/media_service_poc/pulls/584/commits
+  response:
+    body:
+      string: "[{\"sha\":\"73b6f1f7e2af7c29ea52f3c9e2f546f6bcfcbe5e\",\"node_id\":\"C_kwDONq4mjNoAKDczYjZmMWY3ZTJhZjdjMjllYTUyZjNjOWUyZjU0NmY2YmNmY2JlNWU\",\"commit\":{\"author\":{\"name\":\"Pedro
+        Ivan Fernandez Gonzalez\",\"email\":\"pedro.fernandez@alivi.com\",\"date\":\"2025-10-08T21:52:33Z\"},\"committer\":{\"name\":\"Pedro
+        Ivan Fernandez Gonzalez\",\"email\":\"pedro.fernandez@alivi.com\",\"date\":\"2025-10-08T21:52:33Z\"},\"message\":\"Improve
+        approval notification email content and grammar\\n\\n- Remove trailing period
+        from email subject line for consistency\\n- Improve grammar in approval template:
+        \\\"We sent\\\" \u2192 \\\"We've sent\\\"\\n- Update corresponding test to
+        match new subject format\",\"tree\":{\"sha\":\"eb24ea20182b572a6bdd595b6715ecae11028f8e\",\"url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/trees/eb24ea20182b572a6bdd595b6715ecae11028f8e\"},\"url\":\"https://api.github.com/repos/razoralv89/media_service_poc/git/commits/73b6f1f7e2af7c29ea52f3c9e2f546f6bcfcbe5e\",\"comment_count\":0,\"verification\":{\"verified\":false,\"reason\":\"unsigned\",\"signature\":null,\"payload\":null,\"verified_at\":null}},\"url\":\"https://api.github.com/repos/razoralv89/media_service_poc/commits/73b6f1f7e2af7c29ea52f3c9e2f546f6bcfcbe5e\",\"html_url\":\"https://github.com/razoralv89/media_service_poc/commit/73b6f1f7e2af7c29ea52f3c9e2f546f6bcfcbe5e\",\"comments_url\":\"https://api.github.com/repos/razoralv89/media_service_poc/commits/73b6f1f7e2af7c29ea52f3c9e2f546f6bcfcbe5e/comments\",\"author\":null,\"committer\":null,\"parents\":[{\"sha\":\"057ca2b579294179026f50044772e01bde50909c\",\"url\":\"https://api.github.com/repos/razoralv89/media_service_poc/commits/057ca2b579294179026f50044772e01bde50909c\",\"html_url\":\"https://github.com/razoralv89/media_service_poc/commit/057ca2b579294179026f50044772e01bde50909c\"}]}]"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 09 Oct 2025 20:14:59 GMT
+      ETag:
+      - W/"89026c69481600c3c5bd82f6bc6e4c841eaacbaa063c7bb9509877b110c16e61"
+      Last-Modified:
+      - Wed, 08 Oct 2025 21:54:12 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - github.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP,Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - ''
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-GitHub-Request-Id:
+      - EC00:226686:8BD0D:25BEAB:68E817C3
+      X-OAuth-Scopes:
+      - gist, read:org, repo
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4991'
+      X-RateLimit-Reset:
+      - '1760043512'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '9'
+      X-XSS-Protection:
+      - '0'
+      x-github-api-version-selected:
+      - '2022-11-28'
+      x-oauth-client-id:
+      - 178c6fc778ccc68e1d6a
+    status:
+      code: 200
+      message: OK
+version: 1
