@@ -1,0 +1,33 @@
+interactions:
+- request:
+    body: '{"billable": true, "description": "Test time entry", "start": "2025-10-09T11:12:56Z",
+      "end": "2025-10-09T11:17:56Z", "projectId": "6789354f7d7d7e362beca9bf"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '157'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.32.5
+      X-Api-Key:
+      - CLOCKIFY_API_KEY_PLACEHOLDER
+    method: POST
+    uri: https://api.clockify.me/api/v1/workspaces/669ffbbb733d066b1656a3f8/time-entries
+  response:
+    body:
+      string: '{"id":"68e7d22778f9036edef7541e","description":"Test time entry","billable":true,"projectId":"6789354f7d7d7e362beca9bf"}'
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 09 Oct 2025 15:17:59 GMT
+    status:
+      code: 201
+      message: Created
+version: 1

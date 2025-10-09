@@ -1,0 +1,62 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - token GITHUB_TOKEN_PLACEHOLDER
+      Connection:
+      - keep-alive
+      User-Agent:
+      - PyGithub/Python
+    method: GET
+    uri: https://api.github.com/repos/razoralv89/media_service_poc
+  response:
+    body:
+      string: '{"id":917382796,"node_id":"R_kgDONq4mjA","name":"media_service_poc","full_name":"razoralv89/media_service_poc","private":true}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 09 Oct 2025 11:09:02 GMT
+      Server:
+      - github.com
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - token GITHUB_TOKEN_PLACEHOLDER
+      Connection:
+      - keep-alive
+      User-Agent:
+      - PyGithub/Python
+    method: GET
+    uri: https://api.github.com/repos/razoralv89/media_service_poc/pulls/584
+  response:
+    body:
+      string: '{"url":"https://api.github.com/repos/razoralv89/media_service_poc/pulls/584","id":2898843844,"title":"Improve approval notification email content and grammar"}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 09 Oct 2025 11:09:03 GMT
+      Server:
+      - github.com
+    status:
+      code: 200
+      message: OK
+version: 1
