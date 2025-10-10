@@ -30,7 +30,11 @@ class WakaClient:
         return True
 
     def get_total_time(
-        self, branch_name: str, project: str, search_date: Optional[date] = None
+        self,
+        branch_name: str,
+        project: str,
+        search_date: Optional[date] = None,
+        timezone: Optional[str] = "America/Havana",
     ) -> Optional[WakaTotalDuration]:
         """Get total time spent on a specific branch today.
 
@@ -51,6 +55,7 @@ class WakaClient:
             ),
             "branches": branch_name,
             "project": project,
+            "timezone": timezone,
         }
 
         resp = requests.get(
@@ -63,11 +68,17 @@ class WakaClient:
         if resp.status_code != 200 or not resp.json().get("data"):
             return None
 
-        data = resp.json()
-        durations = [item["duration"] for item in data.get("data", [])]
+        response_data = resp.json()
+        heartbeats = list(response_data.get("data", []))
+        starts = [heartbeat.get("time") for heartbeat in heartbeats]
+        sorted_starts = sorted(starts)
+        start = sorted_starts[0]
+        durations = [item["duration"] for item in heartbeats]
         total_duration = sum(durations)
+        end = start + total_duration
+
         return WakaTotalDuration(
-            start=datetime.fromisoformat(data["start"]),
-            end=datetime.fromisoformat(data["end"]),
+            start=datetime.fromtimestamp(start),
+            end=datetime.fromtimestamp(end),
             duration=total_duration,
         )

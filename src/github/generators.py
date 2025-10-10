@@ -40,32 +40,18 @@ class PullRequestReport(FluentBase):
         if not self.data.commits:
             return self
 
-        summary = f"# Branch: {self.data.branch_name}\n\n"
-        commits = self.data.commits
         status_emoji = {
             "MERGED": "✅",
             "OPEN": "🔄",
             "CLOSED": "❌",
         }.get(self.data.state.upper(), "❔")
-        summary += (
+        summary = (
             f"**Pull Request**: {status_emoji} PR #{self.data.number} - {self.data.title}\n"
             f"**PR URL**: {self.data.url}\n\n"
         )
-        pr_numbers = {
-            match for c in commits for match in re.findall(r"#(\d+)", c.message)
-        }
-        if pr_numbers:
-            summary += (
-                f"**Related PRs**: #{', #'.join(sorted(pr_numbers, key=int))}\n\n"
-            )
-        summary += f"**Total Commits**: {len(commits)}\n"
+        summary += f"# Branch: {self.data.branch_name}\n\n"
 
-        authors = sorted(set(c.author for c in commits))
-        if len(authors) == 1:
-            summary += f"**Developer**: {authors[0]}\n\n"
-        else:
-            summary += f"**Developers**: {', '.join(authors)}\n\n"
-
+        commits = self.data.commits
         categories: Dict[str, List[CommitData]] = {}
         for c in commits:
             category = self.categorize_commit_message(c.message)
@@ -80,12 +66,6 @@ class PullRequestReport(FluentBase):
                 ).strip()
                 summary += f"- {clean_message} `{c.hash}`\n"
             summary += "\n"
-
-        if len(commits) <= 10:
-            summary += "## Commit History:\n\n"
-            for c in commits:
-                emoji = self.categorize_commit_message(c.message).split()[0]
-                summary += f"- {emoji} **{c.date}**: {c.message} `{c.hash}`\n"
 
         self.data.summary = summary
         return self

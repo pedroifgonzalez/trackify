@@ -1,3 +1,7 @@
+from datetime import datetime
+from zoneinfo import ZoneInfo
+
+
 def get_time_short_description(duration: float) -> str:
     """Get time duration expressed in short description
 
@@ -26,6 +30,24 @@ def get_time_short_description(duration: float) -> str:
     seconds = int(duration % 60)
     desc = f"{hours}h {minutes}m {seconds}s"
     return desc
+
+
+def convert_timestamp_with_timezone(timestamp: float, timezone: str) -> datetime:
+    """Get datetime adjusted to a specific timezone.
+
+    Args:
+        timestamp (float): Timestamp to convert.
+        timezone (str): Target timezone name (e.g., "America/Havana").
+
+    Returns:
+        datetime: Datetime converted to the specified timezone.
+
+    Examples:
+        >>> convert_timestamp_with_timezone(1759960320.983, "America/Havana")
+        datetime.datetime(2025, 10, 8, 17, 52, 0, 983000, tzinfo=zoneinfo.ZoneInfo(key='America/Havana'))
+    """
+    dt = datetime.fromtimestamp(timestamp, tz=ZoneInfo("UTC"))
+    return dt.astimezone(ZoneInfo(timezone))
 
 
 if __name__ == "__main__":
