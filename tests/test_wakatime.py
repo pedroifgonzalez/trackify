@@ -4,7 +4,7 @@ import os
 import pytest
 
 from src.utils.time import get_time_short_description
-from src.wakatime.client import WakaClient
+from src.clients.wakatime.client import WakaClient
 
 WAKATIME_CLIENT_ID = os.getenv("WAKATIME_CLIENT_ID")
 WAKATIME_CLIENT_SECRET = os.getenv("WAKATIME_CLIENT_SECRET")

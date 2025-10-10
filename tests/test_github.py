@@ -2,8 +2,8 @@ import os
 
 import pytest
 
-from src.github.client import GitHubClient
-from src.github.generators import PullRequestReport
+from src.clients.github.client import GitHubClient
+from src.clients.github.generators import PullRequestReport
 
 ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
 REPO_NAME = os.getenv("REPO_NAME")

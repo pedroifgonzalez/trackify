@@ -1,7 +1,7 @@
 import re
 from typing import Dict, List, Optional
 
-from src.github.dtos import CommitData, PullRequestData
+from src.clients.github.dtos import CommitData, PullRequestData
 
 from .base import FluentBase
 

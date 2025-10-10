@@ -5,12 +5,12 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.text import Text
 
-from src.clockify.client import ClockifyClient
-from src.github.client import GitHubClient
-from src.github.generators import PullRequestReport
+from src.clients.clockify.client import ClockifyClient
+from src.clients.github.client import GitHubClient
+from src.clients.github.generators import PullRequestReport
+from src.clients.wakatime.client import WakaClient
 from src.orchestrator.main import Orchestrator
 from src.utils.time import beautify_datetime, get_time_short_description
-from src.wakatime.client import WakaClient
 from tests.test_clockify import CLOCKIFY_API_KEY
 
 app = typer.Typer()

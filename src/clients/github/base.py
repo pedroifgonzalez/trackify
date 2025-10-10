@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Callable, List
 
-from src.github.dtos import CommitData, PullRequestData
+from src.clients.github.dtos import CommitData, PullRequestData
 
 
 class IGitClient(ABC):

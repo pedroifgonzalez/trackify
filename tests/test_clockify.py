@@ -3,7 +3,7 @@ import os
 
 import pytest
 
-from src.clockify.client import ClockifyClient
+from src.clients.clockify.client import ClockifyClient
 
 CLOCKIFY_API_KEY = os.getenv("CLOCKIFY_API_KEY")
 WORKSPACE_ID = os.getenv("WORKSPACE_ID")

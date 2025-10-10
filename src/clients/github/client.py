@@ -1,8 +1,8 @@
 from typing import List
 
 from github import Auth, Github
-from src.github.base import IGitClient
-from src.github.dtos import CommitData, PullRequestData
+from src.clients.github.base import IGitClient
+from src.clients.github.dtos import CommitData, PullRequestData
 
 
 class GitHubClient(IGitClient):
