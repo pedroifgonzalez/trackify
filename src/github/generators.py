@@ -11,9 +11,16 @@ class PullRequestReport(FluentBase):
 
     def __init__(
         self,
-        data: Optional[PullRequestData],
+        data: Optional[PullRequestData] = None,
     ):
-        self.data = data
+        self.context = {
+            "commits": data.commits if data else [],
+            "state": data.state if data else None,
+            "number": data.number if data else None,
+            "title": data.title if data else None,
+            "branch_name": data.branch_name if data else None,
+            "url": data.url if data else None,
+        }
 
     def categorize_commit_message(self, message: str) -> str:
         """Categorize a commit message by prefix."""
@@ -34,48 +41,65 @@ class PullRequestReport(FluentBase):
 
     def add_summary(self) -> "PullRequestReport":
         """Generate the branch summary for Clockify."""
-        if not self.data:
+        if not self.context:
             return self
 
-        if not self.data.commits:
+        if not self.context["commits"]:
+            return self
+
+        state = self.context.get("state")
+        number = self.context.get("number")
+        title = self.context.get("title")
+        branch_name = self.context.get("branch_name")
+        url = self.context.get("url")
+
+        if not any([state, number, title, branch_name, url]):
             return self
 
         status_emoji = {
             "MERGED": "✅",
             "OPEN": "🔄",
-            "CLOSED": "❌",
-        }.get(self.data.state.upper(), "❔")
-        summary = (
-            f"**Pull Request**: {status_emoji} PR #{self.data.number} - {self.data.title}\n"
-            f"**PR URL**: {self.data.url}\n\n"
-        )
-        summary += f"# Branch: {self.data.branch_name}\n\n"
+            "CLOSED": "✅",
+        }.get(state.upper(), "❔")
+        summary = f"{status_emoji} PR #{number} - {title}\n" f"{url}\n\n"
+        summary += f"Branch: {branch_name}\n\n"
 
-        commits = self.data.commits
+        commits = self.context["commits"]
         categories: Dict[str, List[CommitData]] = {}
         for c in commits:
             category = self.categorize_commit_message(c.message)
             categories.setdefault(category, []).append(c)
 
-        summary += "## Work Summary:\n\n"
+        summary += "Work Summary:\n\n"
         for category, category_commits in categories.items():
-            summary += f"### {category} ({len(category_commits)} commits)\n"
+            summary += f"{category} ({len(category_commits)} commits)\n"
             for c in category_commits:
                 clean_message = re.sub(
                     r"^[a-z]+:\s*", "", c.message, flags=re.I
                 ).strip()
-                summary += f"- {clean_message} `{c.hash}`\n"
+                summary += f"- {clean_message} {c.hash}\n"
             summary += "\n"
 
-        self.data.summary = summary
+        self.context["summary"] = summary
         return self
 
     def add_commits(self, commits: List[CommitData]) -> "PullRequestReport":
-        if self.data:
-            self.data.commits = commits
+        if self.context:
+            self.context["commits"] = commits
+        return self
+
+    def add_pr(self, pr: PullRequestData) -> "PullRequestReport":
+        if self.context:
+            self.context["pr"] = pr
+            self.context["state"] = pr.state
+            self.context["number"] = pr.number
+            self.context["title"] = pr.title
+            self.context["branch_name"] = pr.branch_name
+            self.context["url"] = pr.url
+            self.context["repo_name"] = pr.repo_name
         return self
 
     def export_markdown(self) -> str:
-        if self.data and self.data.summary:
-            return self.data.summary
+        if self.context and self.context["summary"]:
+            return self.context["summary"]
         return ""

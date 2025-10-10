@@ -50,6 +50,22 @@ def convert_timestamp_with_timezone(timestamp: float, timezone: str) -> datetime
     return dt.astimezone(ZoneInfo(timezone))
 
 
+def beautify_datetime(dt: datetime) -> str:
+    """Format a datetime object to a human-readable string.
+
+    Args:
+        dt (datetime): The datetime object to format.
+
+    Returns:
+        str: The beautified datetime string.
+
+    Examples:
+        >>> beautify_datetime(datetime(2025, 10, 8, 17, 52, 0, 983000, tzinfo=ZoneInfo(key='America/Havana')))
+        '2025-10-08 05:52:00 PM'
+    """
+    return dt.strftime("%Y-%m-%d %I:%M:%S %p")
+
+
 if __name__ == "__main__":
     import doctest
 

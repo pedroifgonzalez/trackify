@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import List
 
 from github import Auth, Github
 from src.github.base import IGitClient
@@ -34,6 +34,7 @@ class GitHubClient(IGitClient):
             branch_name=pr.head.ref,
             state=pr.state,
             url=pr.html_url,
+            repo_name=self.repo_name,
         )
 
     def get_pull_commits(self, pr_id: int) -> List[CommitData]:

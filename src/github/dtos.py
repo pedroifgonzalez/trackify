@@ -19,3 +19,4 @@ class PullRequestData:
     url: str
     commits: List[CommitData] = field(default_factory=list)
     summary: Optional[str] = None
+    repo_name: Optional[str] = None
