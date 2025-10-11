@@ -1,3 +1,4 @@
+import datetime
 import os
 
 import typer
@@ -73,7 +74,13 @@ def trackpr(pr_id: int) -> None:
 
 
 @app.command()
-def get_pr_summary(pr_id: int):
+def get_pr_summary(
+    pr_id: int,
+    date: str = typer.Argument(
+        datetime.date.today().isoformat(),
+        help="Date of the pull request. Defaults to today.",
+    ),
+):
     """Generate and display a summary for a GitHub pull request."""
     # Show a spinner while fetching PR data
     with console.status(f"[bold blue]Fetching PR #{pr_id} data...", spinner="dots"):
@@ -92,7 +99,7 @@ def get_pr_summary(pr_id: int):
             )
             .with_report_generator(PullRequestReport())
             .get_pull(pr_id)
-            .compute_time()
+            .compute_time(search_date=datetime.datetime.fromisoformat(date))
             .add_summary()
         )
 
