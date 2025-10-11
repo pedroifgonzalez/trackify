@@ -1,9 +1,20 @@
 import re
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, TypedDict
 
 from src.clients.github.dtos import CommitData, PullRequestData
 
 from .base import FluentBase
+
+
+class Context(TypedDict):
+    commits: List[CommitData]
+    state: Optional[str]
+    number: Optional[int]
+    title: Optional[str]
+    branch_name: Optional[str]
+    url: Optional[str]
+    summary: Optional[str]
+    repo_name: Optional[str]
 
 
 class PullRequestReport(FluentBase):
@@ -13,13 +24,15 @@ class PullRequestReport(FluentBase):
         self,
         data: Optional[PullRequestData] = None,
     ):
-        self.context = {
+        self.context: Context = {
             "commits": data.commits if data else [],
             "state": data.state if data else None,
             "number": data.number if data else None,
             "title": data.title if data else None,
             "branch_name": data.branch_name if data else None,
             "url": data.url if data else None,
+            "summary": None,
+            "repo_name": data.repo_name if data else None,
         }
 
     def categorize_commit_message(self, message: str) -> str:
@@ -53,15 +66,17 @@ class PullRequestReport(FluentBase):
         branch_name = self.context.get("branch_name")
         url = self.context.get("url")
 
-        if not any([state, number, title, branch_name, url]):
+        if not all([state, number, title, branch_name, url]):
             return self
 
+        # We've already checked that state is not None on line 69
+        assert state is not None, "State should not be None here"
         status_emoji = {
             "MERGED": "✅",
             "OPEN": "🔄",
             "CLOSED": "✅",
         }.get(state.upper(), "❔")
-        summary = f"{status_emoji} PR #{number} - {title}\n" f"{url}\n\n"
+        summary = f"{status_emoji} PR #{number} - {title}\n{url}\n\n"
         summary += f"Branch: {branch_name}\n\n"
 
         commits = self.context["commits"]
@@ -90,7 +105,6 @@ class PullRequestReport(FluentBase):
 
     def add_pr(self, pr: PullRequestData) -> "PullRequestReport":
         if self.context:
-            self.context["pr"] = pr
             self.context["state"] = pr.state
             self.context["number"] = pr.number
             self.context["title"] = pr.title
