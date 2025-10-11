@@ -3,8 +3,8 @@ import os
 
 import pytest
 
+from src.clients.activity_trackers.wakatime.client import WakaClient
 from src.utils.time import get_time_short_description
-from src.clients.wakatime.client import WakaClient
 
 WAKATIME_CLIENT_ID = os.getenv("WAKATIME_CLIENT_ID")
 WAKATIME_CLIENT_SECRET = os.getenv("WAKATIME_CLIENT_SECRET")
@@ -20,7 +20,7 @@ def test_get_total_time():
     )
     waka_total_duration = waka_client.get_total_time(
         branch_name=BRANCH_NAME,
-        project=WAKATIME_PROJECT,
+        project_name=WAKATIME_PROJECT,
         search_date=datetime.date(2025, 10, 8),
     )
     assert waka_total_duration

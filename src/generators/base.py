@@ -1,14 +1,4 @@
-from abc import ABC, abstractmethod
-from typing import Callable, List
-
-from src.clients.github.dtos import CommitData, PullRequestData
-
-
-class IGitClient(ABC):
-    @abstractmethod
-    def get_pull_request(self, pr_id: int) -> PullRequestData: ...
-    @abstractmethod
-    def get_pull_commits(self, pr_id: int) -> List[CommitData]: ...
+from typing import Callable
 
 
 class FluentBase:

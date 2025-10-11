@@ -1,50 +1,32 @@
-from dataclasses import dataclass
 from datetime import date, datetime
 from typing import Optional
 
 import requests
 
-
-@dataclass
-class WakaTotalDuration:
-    start: datetime
-    end: datetime
-    duration: float
+from src.clients.activity_trackers.base import ActivityDuration, IActivityTracker
 
 
-class WakaClient:
+class WakaClient(IActivityTracker):
     def __init__(self, api_key: str):
         self.api_key = api_key
         self.api_base_url = "https://wakatime.com/api/v1/"
 
-    def _authenticate(self) -> bool:
-        """Check that the provided API key works."""
-        headers = {"Authorization": f"Basic {self.api_key}"}
-        resp = requests.get(
-            f"{self.api_base_url}users/current",
-            headers=headers,
-            timeout=10,  # Add timeout to prevent hanging requests
-        )
-        if resp.status_code != 200:
-            return False
-        return True
-
     def get_total_time(
         self,
         branch_name: str,
-        project: str,
+        project_name: str,
         search_date: Optional[date] = None,
         timezone: Optional[str] = "America/Havana",
-    ) -> Optional[WakaTotalDuration]:
+    ) -> Optional[ActivityDuration]:
         """Get total time spent on a specific branch today.
 
         Args:
             branch_name (str): Branch name
-            project (str): Project name
+            project_name (str): Project name
             search_date (Optional[date], optional): Date to search for. Defaults to None.
 
         Returns:
-            WakaTotalDuration: Total time spent on the branch
+            ActivityDuration: Total time spent on the branch
         """
         headers = {"Authorization": f"Basic {self.api_key}"}
         params = {
@@ -54,7 +36,7 @@ class WakaClient:
                 else search_date.strftime("%Y-%m-%d")
             ),
             "branches": branch_name,
-            "project": project,
+            "project": project_name,
             "timezone": timezone,
         }
 
@@ -62,7 +44,7 @@ class WakaClient:
             f"{self.api_base_url}users/current/durations",
             headers=headers,
             params=params,
-            timeout=10,  # Add timeout to prevent hanging requests
+            timeout=10,
         )
 
         if resp.status_code != 200 or not resp.json().get("data"):
@@ -77,7 +59,7 @@ class WakaClient:
         total_duration = sum(durations)
         end = start + total_duration
 
-        return WakaTotalDuration(
+        return ActivityDuration(
             start=datetime.fromtimestamp(start),
             end=datetime.fromtimestamp(end),
             duration=total_duration,

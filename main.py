@@ -5,10 +5,10 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.text import Text
 
-from src.clients.clockify.client import ClockifyClient
-from src.clients.github.client import GitHubClient
-from src.clients.github.generators import PullRequestReport
-from src.clients.wakatime.client import WakaClient
+from src.clients.activity_trackers.wakatime.client import WakaClient
+from src.clients.code_trackers.github.client import GitHubClient
+from src.clients.time_managers.clockify.client import ClockifyClient
+from src.generators.summaries.pullrequest import PullRequestReport
 from src.orchestrator.main import Orchestrator
 from src.utils.time import beautify_datetime, get_time_short_description
 from tests.test_clockify import CLOCKIFY_API_KEY
@@ -38,23 +38,23 @@ if not any(
 
 
 @app.command()
-def trackpr(pr_id: int):
+def trackpr(pr_id: int) -> None:
     """Track time spent on a pull request and log it to Clockify."""
     with console.status(f"[bold green]Processing PR #{pr_id}...", spinner="point"):
         (
             Orchestrator()
-            .with_tracker(
+            .with_code_tracker(
                 GitHubClient(
                     access_token=GITHUB_ACCESS_TOKEN,
                     repo_name=REPO_NAME,
                 )
             )
-            .with_time_tracker(
+            .with_activity_tracker(
                 WakaClient(
                     api_key=WAKATIME_API_KEY,
                 )
             )
-            .with_logger(
+            .with_time_manager(
                 ClockifyClient(
                     api_key=CLOCKIFY_API_KEY,
                     project_id=CLOCKIFY_PROJECT_ID,
@@ -79,13 +79,13 @@ def get_pr_summary(pr_id: int):
     with console.status(f"[bold blue]Fetching PR #{pr_id} data...", spinner="dots"):
         orchestrator = Orchestrator()
         (
-            orchestrator.with_tracker(
+            orchestrator.with_code_tracker(
                 GitHubClient(
                     access_token=GITHUB_ACCESS_TOKEN,
                     repo_name=REPO_NAME,
                 )
             )
-            .with_time_tracker(
+            .with_activity_tracker(
                 WakaClient(
                     api_key=WAKATIME_API_KEY,
                 )

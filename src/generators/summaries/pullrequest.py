@@ -1,9 +1,8 @@
 import re
 from typing import Dict, List, Optional, TypedDict
 
-from src.clients.github.dtos import CommitData, PullRequestData
-
-from .base import FluentBase
+from src.generators.base import FluentBase
+from src.shared.dtos import CommitData, PullRequestData
 
 
 class Context(TypedDict):
