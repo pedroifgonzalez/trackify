@@ -4,10 +4,11 @@ from typing import Any, Dict, Optional
 from src.clients.activity_trackers.base import IActivityTracker
 from src.clients.code_trackers.base import ICodeTracker
 from src.clients.time_managers.base import ITimeManager
+from src.core.base import FluentBase
 from src.generators.summaries.pullrequest import PullRequestReport
 
 
-class Orchestrator:
+class Orchestrator(FluentBase):
     """A fluent, dependency-agnostic orchestrator to coordinate tracking flows."""
 
     def __init__(self) -> None:

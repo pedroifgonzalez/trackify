@@ -84,26 +84,35 @@ def get_pr_summary(
         )
         raise typer.Exit(code=1)
 
-    # Show a spinner while fetching PR data
-    with console.status(f"[bold blue]Fetching PR #{pr_id} data...", spinner="dots"):
+    # Initialize orchestrator
+    with console.status("[bold blue]Initializing orchestrator...", spinner="dots"):
         orchestrator = Orchestrator()
-        (
-            orchestrator.with_code_tracker(
-                GitHubClient(
-                    access_token=config.GITHUB_ACCESS_TOKEN,
-                    repo_name=config.REPO_NAME,
-                )
+        orchestrator.with_code_tracker(
+            GitHubClient(
+                access_token=config.GITHUB_ACCESS_TOKEN,
+                repo_name=config.REPO_NAME,
             )
-            .with_activity_tracker(
-                WakaClient(
-                    api_key=config.WAKATIME_API_KEY,
-                )
+        ).with_activity_tracker(
+            WakaClient(
+                api_key=config.WAKATIME_API_KEY,
             )
-            .with_report_generator(PullRequestReport())
-            .get_pull(pr_id)
-            .compute_time(search_date=search_date)
-            .add_summary()
+        ).with_report_generator(
+            PullRequestReport()
         )
+
+    with console.status(
+        f"[bold blue]Fetching PR #{pr_id} from GitHub...", spinner="dots"
+    ):
+        orchestrator.get_pull(pr_id)
+
+    branch_name = orchestrator.context.get("branch_name")
+    with console.status(
+        f"[bold blue]Computing time for branch: {branch_name}...", spinner="dots"
+    ):
+        orchestrator.compute_time(search_date=search_date)
+
+    with console.status("[bold blue]Generating summary...", spinner="dots"):
+        orchestrator.add_summary()
 
     # Prepare panels
     duration = get_time_short_description(orchestrator.context.get("duration", 0))
@@ -131,7 +140,6 @@ def get_pr_summary(
     layout.add_row(summary_panel, duration_panel)
 
     console.print(layout)
-    logger.info(f"Summary generated successfully for PR #{pr_id}")
     console.print(
         "[bold green]✓[/bold green] [bold]Summary generated successfully![/bold]"
     )

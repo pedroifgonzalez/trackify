@@ -1,7 +1,7 @@
 import re
 from typing import Dict, List, Optional, TypedDict
 
-from src.generators.base import FluentBase
+from src.core.base import FluentBase
 from src.shared.dtos import CommitData, PullRequestData
 
 
