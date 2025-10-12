@@ -24,35 +24,55 @@ logger = logging.getLogger("trackify.pr")
 
 @pr_app.command()
 @handle_errors
-def trackpr(pr_id: int) -> dict:
+def trackpr(
+    pr_id: int,
+    date: str = typer.Argument(
+        None,
+        help="Date of the pull request in ISO format (YYYY-MM-DD). Defaults to today.",
+    ),
+) -> dict:
     """Track time spent on a pull request and log it to Clockify."""
     logger.info(f"Starting time tracking for PR #{pr_id}")
-    with console.status(f"[bold green]Processing PR #{pr_id}...", spinner="point"):
-        orchestrator = Orchestrator()
-        (
-            orchestrator.with_code_tracker(
-                GitHubClient(
-                    access_token=config.GITHUB_ACCESS_TOKEN,
-                    repo_name=config.REPO_NAME,
-                )
-            )
-            .with_activity_tracker(
-                WakaClient(
-                    api_key=config.WAKATIME_API_KEY,
-                )
-            )
-            .with_time_manager(
-                ClockifyClient(
-                    api_key=config.CLOCKIFY_API_KEY,
-                    project_id=config.CLOCKIFY_PROJECT_ID,
-                    workspace_id=config.CLOCKIFY_WORKSPACE_ID,
-                )
-            )
-            .get_pull(pr_id)
-            .compute_time()
-            .add_summary()
-            .log_time()
+
+    search_date = (
+        datetime.datetime.fromisoformat(date) if date else datetime.datetime.now()
+    )
+    orchestrator = Orchestrator()
+    (
+        orchestrator.stage(
+            "Setting code tracker",
+            "with_code_tracker",
+            GitHubClient(
+                access_token=config.GITHUB_ACCESS_TOKEN,
+                repo_name=config.REPO_NAME,
+            ),
         )
+        .stage(
+            "Setting activity tracker",
+            "with_activity_tracker",
+            WakaClient(
+                api_key=config.WAKATIME_API_KEY,
+            ),
+        )
+        .stage(
+            "Setting time manager",
+            "with_time_manager",
+            ClockifyClient(
+                api_key=config.CLOCKIFY_API_KEY,
+                project_id=config.CLOCKIFY_PROJECT_ID,
+                workspace_id=config.CLOCKIFY_WORKSPACE_ID,
+            ),
+        )
+        .stage(
+            "Setting report generator",
+            "with_report_generator",
+            PullRequestReport(),
+        )
+        .stage("Fetching PR", "get_pull", pr_id)
+        .stage("Computing time", "compute_time", search_date=search_date)
+        .stage("Adding summary", "add_summary")
+        .stage("Logging time", "log_time")
+    )
 
     logger.info(f"Time tracking completed successfully for PR #{pr_id}")
     console.print(
@@ -73,7 +93,6 @@ def get_pr_summary(
     """Generate and display a summary for a GitHub pull request."""
     logger.info(f"Generating summary for PR #{pr_id}")
 
-    # The date is already validated and parsed by the decorator
     search_date = (
         datetime.datetime.fromisoformat(date) if date else datetime.datetime.now()
     )
