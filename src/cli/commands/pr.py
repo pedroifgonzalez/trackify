@@ -3,6 +3,7 @@ import logging
 
 import typer
 from rich.console import Console
+from rich.panel import Panel
 
 from src.cli.commands.config import config
 from src.clients.activity_trackers.wakatime.client import WakaClient
@@ -105,7 +106,7 @@ def get_pr_summary(
 
     # Display the summary in a nice panel
     console.print(
-        typer.Panel.fit(
+        Panel.fit(
             orchestrator.context.get("summary", "No summary available"),
             title=f"[bold cyan]PR #{pr_id} Summary[/bold cyan]",
             border_style="cyan",
@@ -118,7 +119,7 @@ def get_pr_summary(
     end = beautify_datetime(orchestrator.context.get("end", "No end available"))
 
     console.print(
-        typer.Panel.fit(
+        Panel.fit(
             f"{duration}\nStart: {start}\nEnd: {end}",
             title=f"[bold cyan]PR #{pr_id} Duration[/bold cyan]",
             border_style="cyan",
