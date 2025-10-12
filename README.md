@@ -14,29 +14,44 @@ Trackify is a powerful tool for tracking time spent on GitHub pull requests and 
 
 ### Prerequisites
 
-- Python 3.13 or higher
-- GitHub account and access token
-- WakaTime account and API key
-- Clockify account and API key
+- Python 3.10 or higher
+- GitHub account and [Personal Access Token](https://github.com/settings/tokens)
+- [WakaTime](https://wakatime.com/) account and API key
+- [Clockify](https://clockify.me/) account and API key
 
 ### Setup
 
-#### Quick Setup (Linux/macOS)
+#### Option 1: Install from PyPI (Recommended)
 
 ```bash
-git clone https://github.com/yourusername/trackify.git
+pip install trackify
+```
+
+Then create a `.env` file in your working directory or set environment variables:
+
+```bash
+cp .env.example .env
+# Edit .env with your API keys
+```
+
+#### Option 2: Install from Source
+
+**Quick Setup (Linux/macOS)**
+
+```bash
+git clone https://github.com/pedroifgonzalez/trackify.git
 cd trackify
 ./setup.sh
 ```
 
 This script will create a virtual environment, install dependencies, and create a `.env` file from the example. You'll just need to edit the `.env` file with your API keys.
 
-#### Manual Setup
+**Manual Setup**
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/trackify.git
+git clone https://github.com/pedroifgonzalez/trackify.git
 cd trackify
 ```
 
@@ -50,25 +65,19 @@ pip install -e .
 
 3. Set up environment variables:
 
-You can either set environment variables directly:
-
-```bash
-export ACCESS_TOKEN="your-github-token"
-export REPO_NAME="owner/repo"
-export WAKATIME_API_KEY="your-wakatime-api-key"
-export CLOCKIFY_API_KEY="your-clockify-api-key"
-export CLOCKIFY_WORKSPACE_ID="your-clockify-workspace-id"
-export CLOCKIFY_PROJECT_ID="your-clockify-project-id"
-```
-
-On Windows, use `set` instead of `export`.
-
-Alternatively, copy the example configuration file and fill in your values:
+Copy the example configuration file and fill in your values:
 
 ```bash
 cp .env.example .env
-# Edit .env with your values
+# Edit .env with your API keys
 ```
+
+**Getting API Keys:**
+
+- **GitHub Token**: Go to [GitHub Settings > Developer settings > Personal access tokens](https://github.com/settings/tokens) and create a token with `repo` scope
+- **WakaTime API Key**: Find it in your [WakaTime Settings](https://wakatime.com/settings/account)
+- **Clockify API Key**: Generate one in [Clockify Settings > Profile Settings](https://app.clockify.me/user/settings)
+- **Clockify Workspace & Project IDs**: Find these in the Clockify URL when viewing your workspace/project
 
 ## Usage
 
@@ -77,7 +86,12 @@ Trackify provides two main commands:
 ### Track Time for a Pull Request
 
 ```bash
-python main.py trackpr <pr_id>
+trackify trackpr <pr_id>
+```
+
+**Example:**
+```bash
+trackify trackpr 123
 ```
 
 This command:
@@ -89,10 +103,21 @@ This command:
 ### Generate PR Summary
 
 ```bash
-python main.py get-pr-summary <pr_id>
+trackify get-pr-summary <pr_id> [date]
+```
+
+**Examples:**
+```bash
+# Get summary for today
+trackify get-pr-summary 123
+
+# Get summary for a specific date
+trackify get-pr-summary 123 2025-10-11
 ```
 
 This command generates and displays a summary of the PR without logging time to Clockify.
+
+**Note:** If you installed from source, use `python main.py` instead of `trackify`.
 
 For more detailed instructions, see the [Quick Start Guide](docs/quickstart.md).
 
@@ -116,6 +141,43 @@ Trackify follows a modular architecture with clear separation of concerns:
 
 For detailed architecture diagrams, see the [architecture documentation](docs/architecture.md).
 
+## Troubleshooting
+
+### Common Issues
+
+**Missing Environment Variables**
+```
+ValueError: Missing required environment variables: ACCESS_TOKEN, REPO_NAME
+```
+**Solution**: Make sure your `.env` file exists and contains all required variables. Check that you're running the command from the project directory.
+
+**Invalid Date Format**
+```
+Error: Invalid date format '10-11-2025'. Please use ISO format (YYYY-MM-DD).
+```
+**Solution**: Use the ISO date format: `YYYY-MM-DD`, e.g., `2025-10-11`.
+
+**GitHub API Rate Limit**
+```
+GitHub API rate limit exceeded
+```
+**Solution**: Wait for the rate limit to reset or use a GitHub token with higher limits.
+
+**No Time Data Found**
+```
+ValueError: No time data found for the specified branch and project.
+```
+**Solution**: Ensure you have WakaTime tracking enabled for the project and branch. Check that the branch name matches exactly.
+
+### Debug Mode
+
+For more detailed error messages, you can set the log level:
+
+```bash
+export LOG_LEVEL=DEBUG
+trackify trackpr 123
+```
+
 ## Development
 
 ### Running Tests
@@ -134,6 +196,21 @@ The project uses several tools to maintain code quality:
 - **MyPy**: Static type checking
 - **Bandit**: Security linting
 - **Pre-commit**: Git hooks for code quality checks
+
+To set up pre-commit hooks:
+
+```bash
+pre-commit install
+```
+
+To run all checks manually:
+
+```bash
+black src/ tests/
+mypy src/
+bandit -r src/
+pytest
+```
 
 ## License
 

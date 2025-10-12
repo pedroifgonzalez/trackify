@@ -1,15 +1,58 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "trackify"
 version = "0.1.0"
-description = "Add your description here"
+description = "A powerful tool for tracking time spent on GitHub pull requests and branches"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Pedro Gonzalez", email = "pedroifgonzalez@gmail.com"},
+]
+maintainers = [
+    {name = "Pedro Gonzalez", email = "pedroifgonzalez@gmail.com"},
+]
+keywords = [
+    "github",
+    "time-tracking",
+    "wakatime",
+    "clockify",
+    "pull-request",
+    "productivity",
+    "developer-tools",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Version Control :: Git",
+    "Topic :: Utilities",
+]
 dependencies = [
     "pygithub>=2.8.1",
     "requests>=2.32.0",
     "rich>=14.2.0",
     "typer>=0.19.2",
 ]
+
+[project.urls]
+Homepage = "https://github.com/pedroifgonzalez/trackify"
+Documentation = "https://github.com/pedroifgonzalez/trackify#readme"
+Repository = "https://github.com/pedroifgonzalez/trackify.git"
+Issues = "https://github.com/pedroifgonzalez/trackify/issues"
+Changelog = "https://github.com/pedroifgonzalez/trackify/blob/main/CHANGELOG.md"
+
+[project.scripts]
+trackify = "main:app"
 
 [dependency-groups]
 dev = [

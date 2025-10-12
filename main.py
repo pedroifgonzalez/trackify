@@ -1,5 +1,7 @@
 import datetime
+import logging
 import os
+import sys
 
 import typer
 from rich.console import Console
@@ -12,35 +14,57 @@ from src.clients.time_managers.clockify.client import ClockifyClient
 from src.generators.summaries.pullrequest import PullRequestReport
 from src.orchestrator.main import Orchestrator
 from src.utils.time import beautify_datetime, get_time_short_description
-from tests.test_clockify import CLOCKIFY_API_KEY
 
-app = typer.Typer()
 console = Console()
 
-GITHUB_ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
-REPO_NAME = os.getenv("REPO_NAME")
-WAKATIME_API_KEY = os.getenv("WAKATIME_API_KEY")
-CLOCKIFY_API_KEY = os.getenv("CLOCKIFY_API_KEY")
-CLOCKIFY_PROJECT_ID = os.getenv("CLOCKIFY_PROJECT_ID")
-CLOCKIFY_WORKSPACE_ID = os.getenv("CLOCKIFY_WORKSPACE_ID")
+# Configure logging
+LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
+logging.basicConfig(
+    level=getattr(logging, LOG_LEVEL, logging.INFO),
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    handlers=[logging.StreamHandler(sys.stdout)],
+)
+logger = logging.getLogger("trackify")
+
+GITHUB_ACCESS_TOKEN = os.getenv("ACCESS_TOKEN", "")
+REPO_NAME = os.getenv("REPO_NAME", "")
+WAKATIME_API_KEY = os.getenv("WAKATIME_API_KEY", "")
+CLOCKIFY_API_KEY = os.getenv("CLOCKIFY_API_KEY", "")
+CLOCKIFY_PROJECT_ID = os.getenv("CLOCKIFY_PROJECT_ID", "")
+CLOCKIFY_WORKSPACE_ID = os.getenv("CLOCKIFY_WORKSPACE_ID", "")
 
 
-if not any(
-    [
-        GITHUB_ACCESS_TOKEN,
-        WAKATIME_API_KEY,
-        CLOCKIFY_API_KEY,
-        REPO_NAME,
-        CLOCKIFY_PROJECT_ID,
-        CLOCKIFY_WORKSPACE_ID,
-    ]
-):
-    raise ValueError("Missing required environment variables.")
+# Validate required environment variables
+missing_vars = []
+if not GITHUB_ACCESS_TOKEN:
+    missing_vars.append("ACCESS_TOKEN")
+if not WAKATIME_API_KEY:
+    missing_vars.append("WAKATIME_API_KEY")
+if not CLOCKIFY_API_KEY:
+    missing_vars.append("CLOCKIFY_API_KEY")
+if not REPO_NAME:
+    missing_vars.append("REPO_NAME")
+if not CLOCKIFY_PROJECT_ID:
+    missing_vars.append("CLOCKIFY_PROJECT_ID")
+if not CLOCKIFY_WORKSPACE_ID:
+    missing_vars.append("CLOCKIFY_WORKSPACE_ID")
+
+if missing_vars:
+    error_msg = (
+        f"Missing required environment variables: {', '.join(missing_vars)}. "
+        "Please set them in your .env file or environment."
+    )
+    logger.error(error_msg)
+    raise ValueError(error_msg)
+
+
+app = typer.Typer()
 
 
 @app.command()
 def trackpr(pr_id: int) -> None:
     """Track time spent on a pull request and log it to Clockify."""
+    logger.info(f"Starting time tracking for PR #{pr_id}")
     with console.status(f"[bold green]Processing PR #{pr_id}...", spinner="point"):
         (
             Orchestrator()
@@ -68,6 +92,7 @@ def trackpr(pr_id: int) -> None:
             .log_time()
         )
 
+    logger.info(f"Time tracking completed successfully for PR #{pr_id}")
     console.print(
         "[bold green]✓[/bold green] [bold]Time tracking completed successfully![/bold]"
     )
@@ -77,11 +102,28 @@ def trackpr(pr_id: int) -> None:
 def get_pr_summary(
     pr_id: int,
     date: str = typer.Argument(
-        datetime.date.today().isoformat(),
-        help="Date of the pull request. Defaults to today.",
+        None,
+        help="Date of the pull request in ISO format (YYYY-MM-DD). Defaults to today.",
     ),
-):
+) -> None:
     """Generate and display a summary for a GitHub pull request."""
+    logger.info(f"Generating summary for PR #{pr_id}")
+
+    # Validate date format
+    try:
+        # Use today's date if not provided
+        if not date:
+            date = datetime.date.today().isoformat()
+        search_date = datetime.datetime.fromisoformat(date)
+        logger.debug(f"Using search date: {search_date}")
+    except ValueError:
+        logger.error(f"Invalid date format: {date}")
+        console.print(
+            f"[bold red]Error:[/bold red] Invalid date format '{date}'. "
+            "Please use ISO format (YYYY-MM-DD)."
+        )
+        raise typer.Exit(code=1)
+
     # Show a spinner while fetching PR data
     with console.status(f"[bold blue]Fetching PR #{pr_id} data...", spinner="dots"):
         orchestrator = Orchestrator()
@@ -99,7 +141,7 @@ def get_pr_summary(
             )
             .with_report_generator(PullRequestReport())
             .get_pull(pr_id)
-            .compute_time(search_date=datetime.datetime.fromisoformat(date))
+            .compute_time(search_date=search_date)
             .add_summary()
         )
 
@@ -125,7 +167,7 @@ def get_pr_summary(
             padding=(1, 2),
         )
     )
-
+    logger.info(f"Summary generated successfully for PR #{pr_id}")
     console.print(
         "[bold green]✓[/bold green] [bold]Summary generated successfully![/bold]"
     )
