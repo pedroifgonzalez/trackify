@@ -1,7 +1,24 @@
-import os
+from pathlib import Path
 
 import pytest
-import vcr
+
+from src.cli.commands.config import Config
+
+
+@pytest.fixture(scope="session", autouse=True)
+def test_config():
+    """Load test configuration from .env.test."""
+    test_env_path = Path(__file__).parent.parent / ".env.test"
+
+    # Create a test config instance that loads from .env.test
+    test_config = Config(_env_file=test_env_path)
+
+    # Replace the global config with test config
+    import src.cli.commands.config as config_module
+
+    config_module.config = test_config
+
+    return test_config
 
 
 def scrub_api_keys(request):

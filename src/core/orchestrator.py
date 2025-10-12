@@ -5,7 +5,9 @@ from src.clients.activity_trackers.base import IActivityTracker
 from src.clients.code_trackers.base import ICodeTracker
 from src.clients.time_managers.base import ITimeManager
 from src.core.base import FluentBase
+from src.core.exceptions import OrchestratorError
 from src.generators.summaries.pullrequest import PullRequestReport
+from src.utils.time import beautify_datetime, get_time_short_description
 
 
 class Orchestrator(FluentBase):
@@ -138,14 +140,17 @@ class Orchestrator(FluentBase):
 
         Raises:
             ValueError: If branch name or repo name are missing from context.
-            ValueError: If no time data is found for the specified branch and project.
 
         Returns:
             Orchestrator: The orchestrator instance.
+
+        Note:
+            If no time data is found, sets default values (duration=0, start=None, end=None)
+            and adds a warning to the context instead of raising an exception.
         """
         activity_tracker = self._require("activity_tracker")
         if not self.context.get("branch_name") or not self.context.get("repo_name"):
-            raise ValueError("Branch name or repo name missing from context.")
+            raise OrchestratorError("Branch name or repo name missing from context.")
         branch_name = self.context["branch_name"]
         project_name = self.context["repo_name"].split("/")[-1]
         total_time = activity_tracker.get_total_time(
@@ -154,10 +159,17 @@ class Orchestrator(FluentBase):
             search_date=search_date,
         )
         if not total_time:
-            raise ValueError("No time data found for the specified branch and project.")
-        self.context["start"] = total_time.start
-        self.context["end"] = total_time.end
-        self.context["duration"] = total_time.duration
+            # Set default values when no time data is found
+            self.context["start"] = None
+            self.context["end"] = None
+            self.context["duration"] = 0
+            self.context["time_warning"] = (
+                f"No time data found for branch '{branch_name}' and project '{project_name}'"
+            )
+        else:
+            self.context["start"] = total_time.start
+            self.context["end"] = total_time.end
+            self.context["duration"] = total_time.duration
         return self
 
     def add_summary(self) -> "Orchestrator":
@@ -171,7 +183,7 @@ class Orchestrator(FluentBase):
         """
         report_generator = self._require("report_generator")
         if not self.context.get("commits") or not self.context.get("pr"):
-            raise ValueError("Commits or PR missing from context.")
+            raise OrchestratorError("Commits or PR missing from context.")
         report_generator.add_pr(self.context["pr"])
         report_generator.add_commits(self.context["commits"])
         report_generator.add_summary()
@@ -192,7 +204,7 @@ class Orchestrator(FluentBase):
         start = self.context.get("start")
         end = self.context.get("end")
         if not any([summary, start, end]):
-            raise ValueError("Summary or hours missing from context.")
+            raise OrchestratorError("Summary or hours missing from context.")
         time_manager.create_time_entry(description=summary, start=start, end=end)
         return self
 
@@ -203,11 +215,28 @@ class Orchestrator(FluentBase):
             name (str): The name of the dependency.
 
         Raises:
-            RuntimeError: If the dependency is not provided.
+            OrchestratorError: If the dependency is not provided.
 
         Returns:
             Any: The dependency.
         """
         if name not in self.dependencies:
-            raise RuntimeError(f"Dependency '{name}' is required but not provided.")
+            raise OrchestratorError(
+                f"Dependency '{name}' is required but not provided."
+            )
         return self.dependencies[name]
+
+    def beautify_context(self) -> "Orchestrator":
+        """Beautify context."""
+        try:
+            duration = get_time_short_description(self.context.get("duration", 0))
+            start = beautify_datetime(self.context.get("start", "No start available"))
+            end = beautify_datetime(self.context.get("end", "No end available"))
+            self.context["duration"] = duration
+            self.context["start"] = start
+            self.context["end"] = end
+        except Exception:
+            self.context["duration"] = "No duration"
+            self.context["start"] = "No start"
+            self.context["end"] = "No end"
+        return self

@@ -5,6 +5,7 @@ from typing import Any, Dict, List, Optional
 import requests
 
 from src.clients.time_managers.base import ITimeManager, TimeEntry
+from src.core.exceptions import ClientError
 
 
 class ClockifyClient(ITimeManager):
@@ -52,8 +53,7 @@ class ClockifyClient(ITimeManager):
             timeout=10,  # Add timeout to prevent hanging requests
         )
         if response.status_code != 201:
-            print(response.json())
-            raise ValueError(f"Failed to create time entry: {response.status_code}")
+            raise ClientError(f"Failed to create time entry: {response.status_code}")
         response_data: Dict[str, Any] = response.json()
         return TimeEntry(
             billable=bool(response_data["billable"]),
@@ -104,7 +104,7 @@ class ClockifyClient(ITimeManager):
         )
 
         if response.status_code != 200:
-            raise ValueError(f"Failed to get time entries: {response.status_code}")
+            raise ClientError(f"Failed to get time entries: {response.status_code}")
 
         entries = response.json()
 
