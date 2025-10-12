@@ -4,6 +4,7 @@ import logging
 import typer
 from rich.console import Console
 from rich.panel import Panel
+from rich.table import Table
 
 from src.cli.commands.config import config
 from src.clients.activity_trackers.wakatime.client import WakaClient
@@ -104,28 +105,32 @@ def get_pr_summary(
             .add_summary()
         )
 
-    # Display the summary in a nice panel
-    console.print(
-        Panel.fit(
-            orchestrator.context.get("summary", "No summary available"),
-            title=f"[bold cyan]PR #{pr_id} Summary[/bold cyan]",
-            border_style="cyan",
-            padding=(1, 2),
-        )
-    )
-
+    # Prepare panels
     duration = get_time_short_description(orchestrator.context.get("duration", 0))
     start = beautify_datetime(orchestrator.context.get("start", "No start available"))
     end = beautify_datetime(orchestrator.context.get("end", "No end available"))
 
-    console.print(
-        Panel.fit(
-            f"{duration}\nStart: {start}\nEnd: {end}",
-            title=f"[bold cyan]PR #{pr_id} Duration[/bold cyan]",
-            border_style="cyan",
-            padding=(1, 2),
-        )
+    summary_panel = Panel(
+        orchestrator.context.get("summary", "No summary available"),
+        title=f"[bold cyan]PR #{pr_id} Summary[/bold cyan]",
+        border_style="cyan",
+        padding=(1, 2),
     )
+
+    duration_panel = Panel(
+        f"{duration}\nStart: {start}\nEnd: {end}",
+        title=f"[bold cyan]PR #{pr_id} Duration[/bold cyan]",
+        border_style="cyan",
+        padding=(1, 2),
+    )
+
+    # Create a table to display panels side by side
+    layout = Table.grid(expand=True)
+    layout.add_column(ratio=3)
+    layout.add_column(ratio=1)
+    layout.add_row(summary_panel, duration_panel)
+
+    console.print(layout)
     logger.info(f"Summary generated successfully for PR #{pr_id}")
     console.print(
         "[bold green]✓[/bold green] [bold]Summary generated successfully![/bold]"
