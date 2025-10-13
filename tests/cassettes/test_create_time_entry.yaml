@@ -1,7 +1,7 @@
 interactions:
 - request:
-    body: '{"billable": true, "description": "Test time entry", "start": "2025-10-09T11:12:56Z",
-      "end": "2025-10-09T11:17:56Z", "projectId": "6789354f7d7d7e362beca9bf"}'
+    body: '{"billable": true, "description": "Test time entry", "start": "2025-10-09T14:16:54Z",
+      "end": "2025-10-09T14:21:54Z", "projectId": "6789354f7d7d7e362beca9bf"}'
     headers:
       Accept:
       - '*/*'
@@ -15,18 +15,42 @@ interactions:
       - application/json
       User-Agent:
       - python-requests/2.32.5
-      X-Api-Key:
-      - CLOCKIFY_API_KEY_PLACEHOLDER
     method: POST
     uri: https://api.clockify.me/api/v1/workspaces/669ffbbb733d066b1656a3f8/time-entries
   response:
     body:
-      string: '{"id":"68e7d22778f9036edef7541e","description":"Test time entry","billable":true,"projectId":"6789354f7d7d7e362beca9bf"}'
+      string: '{"id":"68e7fd43e38f076cb3e2748f","description":"Test time entry","tagIds":null,"userId":"669ffbbb733d066b1656a3f7","billable":true,"taskId":null,"projectId":"6789354f7d7d7e362beca9bf","timeInterval":{"start":"2025-10-09T14:16:54Z","end":"2025-10-09T14:21:54Z","duration":"PT5M"},"workspaceId":"669ffbbb733d066b1656a3f8","isLocked":false,"customFieldValues":[],"type":"REGULAR","kioskId":null}'
     headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '392'
       Content-Type:
       - application/json
       Date:
-      - Thu, 09 Oct 2025 15:17:59 GMT
+      - Thu, 09 Oct 2025 18:21:55 GMT
+      Expected-Client-Version:
+      - 1.0.0
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      Vary:
+      - Origin
+      - Access-Control-Request-Method
+      - Access-Control-Request-Headers
+      X-Auth-Checksum:
+      - b8d621f425d912dee69c8f92a7ba213f5ad0a195cd10a508f47082d233944229
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '0'
     status:
       code: 201
       message: Created
