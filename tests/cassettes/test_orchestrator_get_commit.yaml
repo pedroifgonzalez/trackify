@@ -1,0 +1,198 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - PyGithub/Python
+    method: GET
+    uri: https://api.github.com/repos/pedroifgonzalez/trackify
+  response:
+    body:
+      string: '{"id":1073118704,"node_id":"R_kgDOP_Z98A","name":"trackify","full_name":"pedroifgonzalez/trackify","private":false,"owner":{"login":"pedroifgonzalez","id":55602011,"node_id":"MDQ6VXNlcjU1NjAyMDEx","avatar_url":"https://avatars.githubusercontent.com/u/55602011?v=4","gravatar_id":"","url":"https://api.github.com/users/pedroifgonzalez","html_url":"https://github.com/pedroifgonzalez","followers_url":"https://api.github.com/users/pedroifgonzalez/followers","following_url":"https://api.github.com/users/pedroifgonzalez/following{/other_user}","gists_url":"https://api.github.com/users/pedroifgonzalez/gists{/gist_id}","starred_url":"https://api.github.com/users/pedroifgonzalez/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/pedroifgonzalez/subscriptions","organizations_url":"https://api.github.com/users/pedroifgonzalez/orgs","repos_url":"https://api.github.com/users/pedroifgonzalez/repos","events_url":"https://api.github.com/users/pedroifgonzalez/events{/privacy}","received_events_url":"https://api.github.com/users/pedroifgonzalez/received_events","type":"User","user_view_type":"public","site_admin":false},"html_url":"https://github.com/pedroifgonzalez/trackify","description":null,"fork":false,"url":"https://api.github.com/repos/pedroifgonzalez/trackify","forks_url":"https://api.github.com/repos/pedroifgonzalez/trackify/forks","keys_url":"https://api.github.com/repos/pedroifgonzalez/trackify/keys{/key_id}","collaborators_url":"https://api.github.com/repos/pedroifgonzalez/trackify/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/pedroifgonzalez/trackify/teams","hooks_url":"https://api.github.com/repos/pedroifgonzalez/trackify/hooks","issue_events_url":"https://api.github.com/repos/pedroifgonzalez/trackify/issues/events{/number}","events_url":"https://api.github.com/repos/pedroifgonzalez/trackify/events","assignees_url":"https://api.github.com/repos/pedroifgonzalez/trackify/assignees{/user}","branches_url":"https://api.github.com/repos/pedroifgonzalez/trackify/branches{/branch}","tags_url":"https://api.github.com/repos/pedroifgonzalez/trackify/tags","blobs_url":"https://api.github.com/repos/pedroifgonzalez/trackify/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/pedroifgonzalez/trackify/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/pedroifgonzalez/trackify/git/refs{/sha}","trees_url":"https://api.github.com/repos/pedroifgonzalez/trackify/git/trees{/sha}","statuses_url":"https://api.github.com/repos/pedroifgonzalez/trackify/statuses/{sha}","languages_url":"https://api.github.com/repos/pedroifgonzalez/trackify/languages","stargazers_url":"https://api.github.com/repos/pedroifgonzalez/trackify/stargazers","contributors_url":"https://api.github.com/repos/pedroifgonzalez/trackify/contributors","subscribers_url":"https://api.github.com/repos/pedroifgonzalez/trackify/subscribers","subscription_url":"https://api.github.com/repos/pedroifgonzalez/trackify/subscription","commits_url":"https://api.github.com/repos/pedroifgonzalez/trackify/commits{/sha}","git_commits_url":"https://api.github.com/repos/pedroifgonzalez/trackify/git/commits{/sha}","comments_url":"https://api.github.com/repos/pedroifgonzalez/trackify/comments{/number}","issue_comment_url":"https://api.github.com/repos/pedroifgonzalez/trackify/issues/comments{/number}","contents_url":"https://api.github.com/repos/pedroifgonzalez/trackify/contents/{+path}","compare_url":"https://api.github.com/repos/pedroifgonzalez/trackify/compare/{base}...{head}","merges_url":"https://api.github.com/repos/pedroifgonzalez/trackify/merges","archive_url":"https://api.github.com/repos/pedroifgonzalez/trackify/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/pedroifgonzalez/trackify/downloads","issues_url":"https://api.github.com/repos/pedroifgonzalez/trackify/issues{/number}","pulls_url":"https://api.github.com/repos/pedroifgonzalez/trackify/pulls{/number}","milestones_url":"https://api.github.com/repos/pedroifgonzalez/trackify/milestones{/number}","notifications_url":"https://api.github.com/repos/pedroifgonzalez/trackify/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/pedroifgonzalez/trackify/labels{/name}","releases_url":"https://api.github.com/repos/pedroifgonzalez/trackify/releases{/id}","deployments_url":"https://api.github.com/repos/pedroifgonzalez/trackify/deployments","created_at":"2025-10-09T16:37:35Z","updated_at":"2025-10-09T16:46:34Z","pushed_at":"2025-10-13T14:06:21Z","git_url":"git://github.com/pedroifgonzalez/trackify.git","ssh_url":"git@github.com:pedroifgonzalez/trackify.git","clone_url":"https://github.com/pedroifgonzalez/trackify.git","svn_url":"https://github.com/pedroifgonzalez/trackify","homepage":null,"size":405,"stargazers_count":0,"watchers_count":0,"language":"Python","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":1,"license":null,"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":1,"watchers":0,"default_branch":"main","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"temp_clone_token":"","allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"allow_auto_merge":false,"delete_branch_on_merge":false,"allow_update_branch":false,"use_squash_pr_title_as_default":false,"squash_merge_commit_message":"COMMIT_MESSAGES","squash_merge_commit_title":"COMMIT_OR_PR_TITLE","merge_commit_message":"PR_TITLE","merge_commit_title":"MERGE_MESSAGE","security_and_analysis":{"secret_scanning":{"status":"enabled"},"secret_scanning_push_protection":{"status":"enabled"},"dependabot_security_updates":{"status":"disabled"},"secret_scanning_non_provider_patterns":{"status":"disabled"},"secret_scanning_validity_checks":{"status":"disabled"}},"network_count":0,"subscribers_count":0}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 13 Oct 2025 15:47:19 GMT
+      ETag:
+      - W/"51dc23c28784b3fa5db8e3a175fb18f04d196db50c2ccfe6a9e8a08f61d48d7b"
+      Last-Modified:
+      - Thu, 09 Oct 2025 16:46:34 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - github.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP,Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - repo
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-GitHub-Request-Id:
+      - 1098:4DDCC:4E3520:1592CA4:68ED1F06
+      X-OAuth-Scopes:
+      - gist, read:org, repo
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4996'
+      X-RateLimit-Reset:
+      - '1760373079'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '4'
+      X-XSS-Protection:
+      - '0'
+      x-github-api-version-selected:
+      - '2022-11-28'
+      x-oauth-client-id:
+      - 178c6fc778ccc68e1d6a
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - PyGithub/Python
+    method: GET
+    uri: https://api.github.com/repos/pedroifgonzalez/trackify/commits/17eb55f13de5130bd40bbee0146152845e415524
+  response:
+    body:
+      string: "{\"sha\":\"17eb55f13de5130bd40bbee0146152845e415524\",\"node_id\":\"C_kwDOP_Z98NoAKDE3ZWI1NWYxM2RlNTEzMGJkNDBiYmVlMDE0NjE1Mjg0NWU0MTU1MjQ\",\"commit\":{\"author\":{\"name\":\"Pedro
+        Iv\xE1n Fern\xE1ndez Gonz\xE1lez\",\"email\":\"pedroifgonzalez@gmail.com\",\"date\":\"2025-10-13T14:05:57Z\"},\"committer\":{\"name\":\"Pedro
+        Iv\xE1n Fern\xE1ndez Gonz\xE1lez\",\"email\":\"pedroifgonzalez@gmail.com\",\"date\":\"2025-10-13T14:05:57Z\"},\"message\":\"refactor:
+        remove pipe method and simplify add_summary logic in PullRequestReport\",\"tree\":{\"sha\":\"b5c3a473ce7beef30ab11105a356fd932c7d4862\",\"url\":\"https://api.github.com/repos/pedroifgonzalez/trackify/git/trees/b5c3a473ce7beef30ab11105a356fd932c7d4862\"},\"url\":\"https://api.github.com/repos/pedroifgonzalez/trackify/git/commits/17eb55f13de5130bd40bbee0146152845e415524\",\"comment_count\":0,\"verification\":{\"verified\":false,\"reason\":\"unsigned\",\"signature\":null,\"payload\":null,\"verified_at\":null}},\"url\":\"https://api.github.com/repos/pedroifgonzalez/trackify/commits/17eb55f13de5130bd40bbee0146152845e415524\",\"html_url\":\"https://github.com/pedroifgonzalez/trackify/commit/17eb55f13de5130bd40bbee0146152845e415524\",\"comments_url\":\"https://api.github.com/repos/pedroifgonzalez/trackify/commits/17eb55f13de5130bd40bbee0146152845e415524/comments\",\"author\":{\"login\":\"pedroifgonzalez\",\"id\":55602011,\"node_id\":\"MDQ6VXNlcjU1NjAyMDEx\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/55602011?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/pedroifgonzalez\",\"html_url\":\"https://github.com/pedroifgonzalez\",\"followers_url\":\"https://api.github.com/users/pedroifgonzalez/followers\",\"following_url\":\"https://api.github.com/users/pedroifgonzalez/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/pedroifgonzalez/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/pedroifgonzalez/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/pedroifgonzalez/subscriptions\",\"organizations_url\":\"https://api.github.com/users/pedroifgonzalez/orgs\",\"repos_url\":\"https://api.github.com/users/pedroifgonzalez/repos\",\"events_url\":\"https://api.github.com/users/pedroifgonzalez/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/pedroifgonzalez/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"committer\":{\"login\":\"pedroifgonzalez\",\"id\":55602011,\"node_id\":\"MDQ6VXNlcjU1NjAyMDEx\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/55602011?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/pedroifgonzalez\",\"html_url\":\"https://github.com/pedroifgonzalez\",\"followers_url\":\"https://api.github.com/users/pedroifgonzalez/followers\",\"following_url\":\"https://api.github.com/users/pedroifgonzalez/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/pedroifgonzalez/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/pedroifgonzalez/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/pedroifgonzalez/subscriptions\",\"organizations_url\":\"https://api.github.com/users/pedroifgonzalez/orgs\",\"repos_url\":\"https://api.github.com/users/pedroifgonzalez/repos\",\"events_url\":\"https://api.github.com/users/pedroifgonzalez/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/pedroifgonzalez/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"parents\":[{\"sha\":\"6cd8df2129a48b57803bbae4e7d206d31f7ae71b\",\"url\":\"https://api.github.com/repos/pedroifgonzalez/trackify/commits/6cd8df2129a48b57803bbae4e7d206d31f7ae71b\",\"html_url\":\"https://github.com/pedroifgonzalez/trackify/commit/6cd8df2129a48b57803bbae4e7d206d31f7ae71b\"}],\"stats\":{\"total\":560,\"additions\":552,\"deletions\":8},\"files\":[{\"sha\":\"d14749b59893b9d82a8522e5f1b7eb7ecf6a85c6\",\"filename\":\"src/core/base.py\",\"status\":\"modified\",\"additions\":0,\"deletions\":5,\"changes\":5,\"blob_url\":\"https://github.com/pedroifgonzalez/trackify/blob/17eb55f13de5130bd40bbee0146152845e415524/src%2Fcore%2Fbase.py\",\"raw_url\":\"https://github.com/pedroifgonzalez/trackify/raw/17eb55f13de5130bd40bbee0146152845e415524/src%2Fcore%2Fbase.py\",\"contents_url\":\"https://api.github.com/repos/pedroifgonzalez/trackify/contents/src%2Fcore%2Fbase.py?ref=17eb55f13de5130bd40bbee0146152845e415524\",\"patch\":\"@@
+        -10,11 +10,6 @@\\n class FluentBase:\\n     \\\"\\\"\\\"Base class to support
+        fluent chaining.\\\"\\\"\\\"\\n \\n-    def pipe(self: T, func: Callable[[T],
+        None]) -> T:\\n-        \\\"\\\"\\\"Allows external functions to enrich the
+        object.\\\"\\\"\\\"\\n-        func(self)\\n-        return self\\n-\\n     def
+        stage(\\n         self: T, message: str, func: Callable[[T], Any] | str, *args:
+        Any, **kwargs: Any\\n     ) -> T:\"},{\"sha\":\"2586fa2bf802e01516cb01db07e0457f990d2b40\",\"filename\":\"src/generators/summaries/pullrequest.py\",\"status\":\"modified\",\"additions\":0,\"deletions\":3,\"changes\":3,\"blob_url\":\"https://github.com/pedroifgonzalez/trackify/blob/17eb55f13de5130bd40bbee0146152845e415524/src%2Fgenerators%2Fsummaries%2Fpullrequest.py\",\"raw_url\":\"https://github.com/pedroifgonzalez/trackify/raw/17eb55f13de5130bd40bbee0146152845e415524/src%2Fgenerators%2Fsummaries%2Fpullrequest.py\",\"contents_url\":\"https://api.github.com/repos/pedroifgonzalez/trackify/contents/src%2Fgenerators%2Fsummaries%2Fpullrequest.py?ref=17eb55f13de5130bd40bbee0146152845e415524\",\"patch\":\"@@
+        -53,9 +53,6 @@ def categorize_commit_message(self, message: str) -> str:\\n
+        \\n     def add_summary(self) -> \\\"PullRequestReport\\\":\\n         \\\"\\\"\\\"Generate
+        the branch summary for Clockify.\\\"\\\"\\\"\\n-        if not self.context:\\n-
+        \           return self\\n-\\n         if not self.context[\\\"commits\\\"]:\\n
+        \            return self\\n \"},{\"sha\":\"9f99750591a8db2c85867dce4d179fa98355ea2a\",\"filename\":\"tests/cassettes/test_get_commit.yaml\",\"status\":\"added\",\"additions\":503,\"deletions\":0,\"changes\":503,\"blob_url\":\"https://github.com/pedroifgonzalez/trackify/blob/17eb55f13de5130bd40bbee0146152845e415524/tests%2Fcassettes%2Ftest_get_commit.yaml\",\"raw_url\":\"https://github.com/pedroifgonzalez/trackify/raw/17eb55f13de5130bd40bbee0146152845e415524/tests%2Fcassettes%2Ftest_get_commit.yaml\",\"contents_url\":\"https://api.github.com/repos/pedroifgonzalez/trackify/contents/tests%2Fcassettes%2Ftest_get_commit.yaml?ref=17eb55f13de5130bd40bbee0146152845e415524\"},{\"sha\":\"3f21460024bf5490f51f48efdaae0eea4b55a6d6\",\"filename\":\"tests/generators/test_pullrequest.py\",\"status\":\"added\",\"additions\":40,\"deletions\":0,\"changes\":40,\"blob_url\":\"https://github.com/pedroifgonzalez/trackify/blob/17eb55f13de5130bd40bbee0146152845e415524/tests%2Fgenerators%2Ftest_pullrequest.py\",\"raw_url\":\"https://github.com/pedroifgonzalez/trackify/raw/17eb55f13de5130bd40bbee0146152845e415524/tests%2Fgenerators%2Ftest_pullrequest.py\",\"contents_url\":\"https://api.github.com/repos/pedroifgonzalez/trackify/contents/tests%2Fgenerators%2Ftest_pullrequest.py?ref=17eb55f13de5130bd40bbee0146152845e415524\",\"patch\":\"@@
+        -0,0 +1,40 @@\\n+import pytest\\n+\\n+from src.generators.summaries.pullrequest
+        import PullRequestReport\\n+from src.shared.dtos import PullRequestData\\n+\\n+\\n+@pytest.mark.parametrize(\\n+
+        \   \\\"message, category\\\",\\n+    [\\n+        (\\\"feat: Add feature\\\",
+        \\\"\u2728 Feature\\\"),\\n+        (\\\"fix: Fix bug\\\", \\\"\U0001F41B
+        Fix\\\"),\\n+        (\\\"refactor: Refactor code\\\", \\\"\U0001F9F9 Refactor\\\"),\\n+
+        \       (\\\"test: Add tests\\\", \\\"\U0001F9EA Test\\\"),\\n+        (\\\"doc:
+        Add documentation\\\", \\\"\U0001F4DD Docs\\\"),\\n+        (\\\"chore: Update
+        dependencies\\\", \\\"\u2699\uFE0F Chore\\\"),\\n+        (\\\"other: Other\\\",
+        \\\"\U0001F50D Other\\\"),\\n+    ],\\n+)\\n+def test_categorize_commit_message(message,
+        category):\\n+    pull_request_report = PullRequestReport()\\n+    assert
+        pull_request_report.categorize_commit_message(message) == category\\n+\\n+\\n+def
+        test_export_markdown_no_summary():\\n+    pull_request_report = PullRequestReport()\\n+
+        \   assert pull_request_report.export_markdown() == \\\"\\\"\\n+\\n+\\n+def
+        test_add_summary_no_commits():\\n+    pull_request_report = PullRequestReport(\\n+
+        \       data=PullRequestData(\\n+            number=1,\\n+            title=\\\"Test
+        Pull Request\\\",\\n+            branch_name=\\\"test/pull-request\\\",\\n+
+        \           state=\\\"open\\\",\\n+            url=\\\"test-url\\\",\\n+        )\\n+
+        \   )\\n+    pull_request_report.add_summary()\\n+    assert pull_request_report.context.get(\\\"summary\\\")
+        == None\"},{\"sha\":\"e804fa57dc869f4b9b6a4b9d0a38161a3da737b6\",\"filename\":\"tests/test_github.py\",\"status\":\"modified\",\"additions\":9,\"deletions\":0,\"changes\":9,\"blob_url\":\"https://github.com/pedroifgonzalez/trackify/blob/17eb55f13de5130bd40bbee0146152845e415524/tests%2Ftest_github.py\",\"raw_url\":\"https://github.com/pedroifgonzalez/trackify/raw/17eb55f13de5130bd40bbee0146152845e415524/tests%2Ftest_github.py\",\"contents_url\":\"https://api.github.com/repos/pedroifgonzalez/trackify/contents/tests%2Ftest_github.py?ref=17eb55f13de5130bd40bbee0146152845e415524\",\"patch\":\"@@
+        -46,3 +46,12 @@ def test_get_branch_commits():\\n     commits = gh_client.get_branch_commits(\\\"develop\\\")\\n
+        \    assert commits\\n     assert len(commits) > 0\\n+\\n+\\n+@pytest.mark.vcr\\n+def
+        test_get_commit():\\n+    gh_client = GitHubClient(\\n+        access_token=ACCESS_TOKEN,
+        repo_name=\\\"pedroifgonzalez/trackify\\\"\\n+    )\\n+    commit = gh_client.get_commit(\\\"6cd8df2129a48b57803bbae4e7d206d31f7ae71b\\\")\\n+
+        \   assert commit\"}]}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 13 Oct 2025 15:47:22 GMT
+      ETag:
+      - W/"d841d3c78de75be3ae8fd7f6931bcd52e48d9f39f6f6811397f3d59e631f9178"
+      Last-Modified:
+      - Mon, 13 Oct 2025 14:05:57 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - github.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP,Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - ''
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-GitHub-Request-Id:
+      - CA40:180823:4EFD75:15B7357:68ED1F09
+      X-OAuth-Scopes:
+      - gist, read:org, repo
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4995'
+      X-RateLimit-Reset:
+      - '1760373079'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '5'
+      X-XSS-Protection:
+      - '0'
+      x-github-api-version-selected:
+      - '2022-11-28'
+      x-oauth-client-id:
+      - 178c6fc778ccc68e1d6a
+    status:
+      code: 200
+      message: OK
+version: 1

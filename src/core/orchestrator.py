@@ -123,13 +123,7 @@ class Orchestrator(FluentBase):
         """
         code_tracker = self._require("code_tracker")
         commit = code_tracker.get_commit(commit_hash)
-        self.context.update(
-            {
-                "commit": commit,
-                "branch_name": commit.branch_name,
-                "repo_name": commit.repo_name,
-            }
-        )
+        self.context.update({"commit": commit})
         return self
 
     def compute_time(self, search_date: Optional[datetime] = None) -> "Orchestrator":
@@ -149,7 +143,10 @@ class Orchestrator(FluentBase):
             and adds a warning to the context instead of raising an exception.
         """
         activity_tracker = self._require("activity_tracker")
-        if not self.context.get("branch_name") or not self.context.get("repo_name"):
+        branch_name, repo_name = self.context.get("branch_name"), self.context.get(
+            "repo_name"
+        )
+        if not all([branch_name, repo_name]):
             raise OrchestratorError("Branch name or repo name missing from context.")
         branch_name = self.context["branch_name"]
         project_name = self.context["repo_name"].split("/")[-1]
@@ -182,10 +179,11 @@ class Orchestrator(FluentBase):
             Orchestrator: The orchestrator instance.
         """
         report_generator = self._require("report_generator")
-        if not self.context.get("commits") or not self.context.get("pr"):
+        pr, commits = self.context.get("pr"), self.context.get("commits")
+        if not all([pr, commits]):
             raise OrchestratorError("Commits or PR missing from context.")
-        report_generator.add_pr(self.context["pr"])
-        report_generator.add_commits(self.context["commits"])
+        report_generator.add_pr(pr)
+        report_generator.add_commits(commits)
         report_generator.add_summary()
         self.context["summary"] = report_generator.export_markdown()
         return self
@@ -203,7 +201,7 @@ class Orchestrator(FluentBase):
         summary = self.context.get("summary")
         start = self.context.get("start")
         end = self.context.get("end")
-        if not any([summary, start, end]):
+        if not all([summary, start, end]):
             raise OrchestratorError("Summary or hours missing from context.")
         time_manager.create_time_entry(description=summary, start=start, end=end)
         return self

@@ -43,7 +43,3 @@ class FluentBase:
             else:
                 func(self)
         return self
-
-    def __repr__(self) -> str:
-        cls = self.__class__.__name__
-        return f"<{cls} {vars(self)}>"
