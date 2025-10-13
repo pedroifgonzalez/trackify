@@ -65,6 +65,7 @@ dev = [
     "bandit>=1.7.7",
     "types-requests>=2.32.4.20250913",
     "pytest-coverage>=0.0",
+    "freezegun>=1.5.5",
 ]
 
 [tool.hatch.build.targets.wheel]

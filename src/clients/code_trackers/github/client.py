@@ -75,9 +75,11 @@ class GitHubClient(ICodeTracker):
             List[CommitData]: List of commits in the branch.
         """
         repo = self.github.get_repo(self.repo_name)
-        commits = []
-        for c in repo.get_commits(sha=branch_name):
-            commits.append(
+        branch = repo.get_branch(branch=branch_name)
+        commits = repo.get_commits(sha=branch.commit.sha)
+        commits_data = []
+        for c in commits:
+            commits_data.append(
                 CommitData(
                     hash=c.sha,
                     message=c.commit.message,
@@ -89,7 +91,7 @@ class GitHubClient(ICodeTracker):
                     ),
                 )
             )
-        return commits
+        return commits_data
 
     def get_commit(self, commit_hash: str) -> CommitData:
         """Get a specific commit.

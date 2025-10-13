@@ -2,6 +2,7 @@ import logging
 
 import pytest
 import typer
+from freezegun import freeze_time
 
 from src.cli.commands.pr import get_pr_summary
 
@@ -13,6 +14,7 @@ def test_get_pr_summary():
     assert result["summary"]
 
 
+@freeze_time("2025-10-12")
 @pytest.mark.vcr()
 def test_get_pr_summary_today():
     context = get_pr_summary(pr_id=592, date=None)

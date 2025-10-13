@@ -36,3 +36,13 @@ def test_pull_request_report():
         PullRequestReport(data=pr).add_commits(commits).add_summary().export_markdown()
     )
     assert report
+
+
+@pytest.mark.vcr
+def test_get_branch_commits():
+    gh_client = GitHubClient(
+        access_token=ACCESS_TOKEN, repo_name="pedroifgonzalez/trackify"
+    )
+    commits = gh_client.get_branch_commits("develop")
+    assert commits
+    assert len(commits) > 0
