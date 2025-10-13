@@ -10,11 +10,6 @@ console = Console()
 class FluentBase:
     """Base class to support fluent chaining."""
 
-    def pipe(self: T, func: Callable[[T], None]) -> T:
-        """Allows external functions to enrich the object."""
-        func(self)
-        return self
-
     def stage(
         self: T, message: str, func: Callable[[T], Any] | str, *args: Any, **kwargs: Any
     ) -> T:

@@ -53,9 +53,6 @@ class PullRequestReport(FluentBase):
 
     def add_summary(self) -> "PullRequestReport":
         """Generate the branch summary for Clockify."""
-        if not self.context:
-            return self
-
         if not self.context["commits"]:
             return self
 
