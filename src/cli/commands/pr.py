@@ -7,7 +7,7 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
 
-from src.cli.commands.config import config
+from src.cli.commands.config import get_or_prompt_config
 from src.cli.decorators import handle_errors
 from src.clients.activity_trackers.wakatime.client import WakaClient
 from src.clients.code_trackers.github.client import GitHubClient
@@ -37,30 +37,34 @@ def trackpr(
     search_date = (
         datetime.datetime.fromisoformat(date) if date else datetime.datetime.now()
     )
+
+    # Load configuration (will prompt if missing)
+    cfg = get_or_prompt_config()
+
     orchestrator = Orchestrator()
     (
         orchestrator.stage(
             "Setting code tracker",
             "with_code_tracker",
             GitHubClient(
-                access_token=config.GITHUB_ACCESS_TOKEN,
-                repo_name=config.REPO_NAME,
+                access_token=cfg.GITHUB_ACCESS_TOKEN,
+                repo_name=cfg.REPO_NAME,
             ),
         )
         .stage(
             "Setting activity tracker",
             "with_activity_tracker",
             WakaClient(
-                api_key=config.WAKATIME_API_KEY,
+                api_key=cfg.WAKATIME_API_KEY,
             ),
         )
         .stage(
             "Setting time manager",
             "with_time_manager",
             ClockifyClient(
-                api_key=config.CLOCKIFY_API_KEY,
-                project_id=config.CLOCKIFY_PROJECT_ID,
-                workspace_id=config.CLOCKIFY_WORKSPACE_ID,
+                api_key=cfg.CLOCKIFY_API_KEY,
+                project_id=cfg.CLOCKIFY_PROJECT_ID,
+                workspace_id=cfg.CLOCKIFY_WORKSPACE_ID,
             ),
         )
         .stage(
@@ -97,21 +101,24 @@ def get_pr_summary(
         datetime.datetime.fromisoformat(date) if date else datetime.datetime.now()
     )
 
+    # Load configuration (will prompt if missing)
+    cfg = get_or_prompt_config()
+
     orchestrator = (
         Orchestrator()
         .stage(
             "Setting code tracker",
             "with_code_tracker",
             GitHubClient(
-                access_token=config.GITHUB_ACCESS_TOKEN,
-                repo_name=config.REPO_NAME,
+                access_token=cfg.GITHUB_ACCESS_TOKEN,
+                repo_name=cfg.REPO_NAME,
             ),
         )
         .stage(
             "Setting activity tracker",
             "with_activity_tracker",
             WakaClient(
-                api_key=config.WAKATIME_API_KEY,
+                api_key=cfg.WAKATIME_API_KEY,
             ),
         )
         .stage("Setting report generator", "with_report_generator", PullRequestReport())

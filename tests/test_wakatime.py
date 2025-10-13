@@ -1,26 +1,20 @@
 import datetime
-import os
 
 import pytest
 
+from src.cli.commands.config import config as cfg
 from src.clients.activity_trackers.wakatime.client import WakaClient
 from src.utils.time import get_time_short_description
-
-WAKATIME_CLIENT_ID = os.getenv("WAKATIME_CLIENT_ID")
-WAKATIME_CLIENT_SECRET = os.getenv("WAKATIME_CLIENT_SECRET")
-WAKATIME_REDIRECT_URI = os.getenv("WAKATIME_REDIRECT_URI")
-BRANCH_NAME = os.getenv("BRANCH_NAME")
-WAKATIME_PROJECT = os.getenv("WAKATIME_PROJECT")
 
 
 @pytest.mark.vcr
 def test_get_total_time():
     waka_client = WakaClient(
-        api_key=os.getenv("WAKATIME_API_KEY"),
+        api_key=cfg.WAKATIME_API_KEY,
     )
     waka_total_duration = waka_client.get_total_time(
-        branch_name=BRANCH_NAME,
-        project_name=WAKATIME_PROJECT,
+        branch_name="fix/improve-approval-notification-email-content",
+        project_name="media_service_poc",
         search_date=datetime.date(2025, 10, 8),
     )
     assert waka_total_duration

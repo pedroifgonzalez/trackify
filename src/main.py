@@ -1,6 +1,7 @@
 import typer
 from rich.console import Console
 
+from src.cli.commands.config import interactive_setup
 from src.cli.commands.pr import pr_app
 
 console = Console()
@@ -8,6 +9,12 @@ app = typer.Typer(help="Trackify CLI — Track coding work and context effortles
 
 # Register command groups
 app.add_typer(pr_app, name="pr")
+
+
+@app.command()
+def setup() -> None:
+    """Interactive setup to configure Trackify with your API keys."""
+    interactive_setup()
 
 
 @app.callback()

@@ -1,21 +1,19 @@
 import datetime
-import os
 from unittest.mock import MagicMock, patch
 
 import pytest
 
+from src.cli.commands.config import config as cfg
 from src.clients.time_managers.clockify.client import ClockifyClient
 from src.core.exceptions import ClientError
-
-CLOCKIFY_API_KEY = os.getenv("CLOCKIFY_API_KEY")
-WORKSPACE_ID = os.getenv("WORKSPACE_ID")
-PROJECT_ID = os.getenv("PROJECT_ID")
 
 
 @pytest.mark.vcr
 def test_create_time_entry():
     clockify_client = ClockifyClient(
-        api_key=CLOCKIFY_API_KEY, workspace_id=WORKSPACE_ID, project_id=PROJECT_ID
+        api_key=cfg.CLOCKIFY_API_KEY,
+        workspace_id=cfg.CLOCKIFY_WORKSPACE_ID,
+        project_id=cfg.CLOCKIFY_PROJECT_ID,
     )
     clockify_total_duration = clockify_client.create_time_entry(
         description="Test time entry",
@@ -27,7 +25,9 @@ def test_create_time_entry():
 
 def test_create_time_entry_no_success():
     clockify_client = ClockifyClient(
-        api_key=CLOCKIFY_API_KEY, workspace_id=WORKSPACE_ID, project_id=PROJECT_ID
+        api_key=cfg.CLOCKIFY_API_KEY,
+        workspace_id=cfg.CLOCKIFY_WORKSPACE_ID,
+        project_id=cfg.CLOCKIFY_PROJECT_ID,
     )
     with (
         patch(
