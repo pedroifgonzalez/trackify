@@ -172,7 +172,7 @@ def get_or_prompt_config() -> Config:
     """Get config, prompting user if it fails to load."""
     global _config
     if _config is None:
-        _config = get_config(interactive=False)
+        _config = get_config(interactive=True)
     return _config
 
 
