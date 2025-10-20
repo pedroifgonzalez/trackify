@@ -26,6 +26,8 @@ class Config(BaseSettings):
     CLOCKIFY_API_KEY: str
     CLOCKIFY_PROJECT_ID: str
     CLOCKIFY_WORKSPACE_ID: str
+    SLACK_BOT_TOKEN: str
+    SLACK_USER_TOKEN: str
 
 
 # Configuration field metadata for interactive prompts
@@ -59,6 +61,16 @@ CONFIG_FIELDS = {
         "prompt": "Clockify Workspace ID",
         "help": "Find in Clockify URL when viewing your workspace",
         "password": False,
+    },
+    "SLACK_BOT_TOKEN": {
+        "prompt": "Slack Bot Token",
+        "help": "Generate at: https://api.slack.com/apps/",
+        "password": True,
+    },
+    "SLACK_USER_TOKEN": {
+        "prompt": "Slack User Token",
+        "help": "Generate at: https://api.slack.com/apps/",
+        "password": True,
     },
 }
 

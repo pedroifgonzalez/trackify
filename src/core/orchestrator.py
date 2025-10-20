@@ -3,6 +3,7 @@ from typing import Any, Dict, Optional
 
 from src.clients.activity_trackers.base import IActivityTracker
 from src.clients.code_trackers.base import ICodeTracker
+from src.clients.communication_channels import NotifierManager
 from src.clients.time_managers.base import ITimeManager
 from src.core.base import FluentBase
 from src.core.exceptions import OrchestratorError
@@ -68,6 +69,20 @@ class Orchestrator(FluentBase):
             Orchestrator: The orchestrator instance.
         """
         self.dependencies["report_generator"] = report_generator
+        return self
+
+    def with_notifier_manager(
+        self, notifier_manager: NotifierManager
+    ) -> "Orchestrator":
+        """Add a notifier manager.
+
+        Args:
+            notifier_manager (NotifierManager): The notifier manager to add.
+
+        Returns:
+            Orchestrator: The orchestrator instance.
+        """
+        self.dependencies["notifier_manager"] = notifier_manager
         return self
 
     def get_pull(self, pr_id: int) -> "Orchestrator":
@@ -204,6 +219,15 @@ class Orchestrator(FluentBase):
         if not all([summary, start, end]):
             raise OrchestratorError("Summary or hours missing from context.")
         time_manager.create_time_entry(description=summary, start=start, end=end)
+        return self
+
+    def notify(self) -> "Orchestrator":
+        """Notify all added notifiers."""
+        notifier_manager = self._require("notifier_manager")
+        message = self.context.get("message")
+        if not message:
+            raise OrchestratorError("Message missing from context.")
+        notifier_manager.notify(message)
         return self
 
     def _require(self, name: str) -> Any:
