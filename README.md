@@ -132,6 +132,7 @@ Trackify follows a modular architecture with clear separation of concerns:
 - **Activity Trackers**: Track time spent on activities (e.g., WakaTime)
 - **Time Managers**: Log time entries to time tracking services (e.g., Clockify)
 - **Report Generators**: Generate summaries and reports
+- **Communication Channels**: Notify messages across multiple com platforms (e.g., Slack)
 
 ### Design Patterns
 
